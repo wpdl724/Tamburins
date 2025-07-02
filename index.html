@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambusins | main </title>
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/index.js" defer></script>
 </head>
 <body>
     <div id="line_ad_wrap"> <!-- 띠배너 제작 시작-->
@@ -17,20 +17,31 @@
     </div> <!-- 띠배너 끝 -->
     <header>
         <div id="top_wrap"><!-- 헤더 큰 묶음 시작 -->
+            <nav class="menu">
                 <h1> <!-- 로고 : 로고클릭시 메인페이지로 이동 -->
                     <a href="./index.html"><img src="./images/logo01.png" alt="탬버린즈 로고"></a>
                 </h1>
-                <div id="gnb"> <!-- gnb 카테고리 시작 (고정되는 헤더 카테고리)-->
-                    <ul class="category">
+                <div id="gnb_wrap"> <!-- gnb 카테고리 시작 (고정되는 헤더 카테고리)-->
+                    <ul class="category"> <!-- 메뉴 리스트 -->
                         <li><a href="#">PERFUME</a></li>
                         <li><a href="#">HAND&LIP</a></li>
                         <li><a href="#">BODY</a></li>
                         <li><a href="#">HOME FRAGRANCE</a></li>
                         <li><a href="#">STORE</a></li>
                     </ul>
-                </div> <!-- gnb 카테고리 끝 -->
+                </div>
+                <div id="user_menu"><!-- 검색창,언어변경,로그인,장바구니 -->
+                    <div class="search">
+                        <input type="search" placeholder="'보타리'를 검색해보세요."><a href="#"><img src="#" alt="검색하기 버튼"></a>
+                    </div>
+                    <div class="lang_change">
+                        <a href="#"><img src="#" alt="언어변경 버튼"></a>
+                    </div>
+                </div>
+            </nav>
+        </div> <!-- gnb 카테고리 끝 -->
                 <div id="lnb_wrap"> <!-- lnb 큰 묶음 시작 -->
-                    <ul class="lnb lnb_perfume"> <!-- lnb 퍼퓸 카테고리 시작 (마우스호버시 보이는 영역) -->
+                    <ul class="lnb lnb_perfume"> <!-- lnb 퍼퓸 카테고리 시작 (마우스 호버시 보이는 영역) -->
                         <li><a href="#"><img src="./images/perfume/bottari_01.png" alt="보타리 신제품">신제품</a></li>
                         <li><a href="#"><img src="./images/perfume/perfume_01.png" alt="퍼퓸 상품">퍼퓸</a></li>
                         <li><a href="#"><img src="./images/perfume/perfumeoil_01.png" alt="퍼퓸 오일 상품">퍼퓸 오일</a></li>
@@ -59,7 +70,13 @@
                         <li><a href="#"><img src="./images/store/gallery.png" alt="전시">전시</a></li>
                     </ul><!-- lnb  홈 스토어 카테고리 끝 -->
                 </div> <!-- lnb 큰 묶음 끝 -->
-            </div>
     </header>
+    <main>
+        <section>
+        <!-- S: 1행 광고영상 배너 -->
+        <!-- E: 1행 광고영상 배너 -->
+    </section>
+    </main>
+    
 </body>
 </html>
