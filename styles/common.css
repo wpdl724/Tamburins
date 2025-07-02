@@ -1,0 +1,26 @@
+/* 탬버린즈 common.css  */
+/* 헤더 + gnb + lnb CSS */
+
+#wrap{
+    width: 1500px;
+}
+#wrap header {
+    display:flex;
+    flex-flow: row nowrap;
+    position: relative;
+}
+#wrap header a img {
+    position: 
+}
+
+#wrap header nav {}
+#wrap header nav .gnb{}
+#wrap header nav .gnb > li {}
+#wrap header nav .gnb > li > a {}
+
+#wrap header nav .gnb > li .lnb_bg{}
+#wrap header nav .gnb > li .lnb_bg .lnb_depth1 li {}
+#wrap header nav .gnb > li .lnb_bg .lnb_depth1 li a {}
+#wrap header nav .gnb > li .lnb_bg .lnb_depth1 li a p {}
+
+/* ------------------- 퍼퓸 카테고리 끝 */
