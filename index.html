@@ -3,81 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAMBURINS |  MAIN </title>
+    <title>Tambusins | main </title>
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/index.css">
-    <script src="./scripts/productlist.js" defer></script>
-    <script src="./scripts/product.js" defer></script>
 </head>
 <body>
-    <div id="wrap">
-        <header>
-            <a href="./index.html"><img src="./images/logo01.png" alt="탬버린즈 로고"></a>
-            <nav>
-                <ul class="gnb">
-                    <li><a href="perfume_list.html">PERFUME</a>
-                        <!-- S: PERFUME_LIST 서브페이지 -->
-                        <div class="lnb_bg">
-                            <ul class="lnb_depth1">
-                                <li><a href="#"><img src="./images/perfume/bottari_01.png" alt="신제품"><p>신제품</p></a></li>
-                                <li><a href="#"><img src="./images/perfume/perfume_01.png" alt="퍼퓸"><p>퍼퓸</p></a></li>
-                                <li><a href="#"><img src="./images/perfume/perfumeoil_01.png" alt="퍼퓸오일"><p>퍼퓸 오일</p></a></li>
-                                <li><a href="#"><img src="./images/perfume/perfumebam_01.png" alt="퍼퓸밤"><p>퍼퓸 밤</p></a></li>
-                                <li><a href="#"><img src="./images/perfume/perfumewear_01.png" alt="퍼퓸웨어"><p>퍼퓸 웨어</p></a></li>
-                            </ul>
-                        </div>
-                        <!-- E: PERFUME_LIST 서브페이지 -->
-                    </li>
-                    <li><a href="#">HAND&LIP</a>
-                        <!-- S: HAND&LIP 서브페이지 -->
-                        <div class="lnb_bg">
-                            <ul class="lnb_depth2">
-                                <li><a href="#"><img src="./images/hand&lip/handlip_01.png" alt=""><p>쉘 퍼퓸 핸드</p></a></li>
-                                <li><a href="#"><img src="./images/hand&lip/handlip_02.png" alt=""><p>에그 립밤</p></a></li>
-                                <li><a href="#"><img src="./images/hand&lip/hadlip_03.png" alt=""><p>체인 핸드</p></a></li>
-                                <li><a href="#"><img src="./images/hand&lip/handlip_04.png" alt=""><p>핸드앤립 웨어</p></a></li>
-                            </ul>
-                        </div>
-                        <!-- E: HAND&LIP 서브페이지 -->
-                    </li>
-                    <li><a href="#">BODY</a>
-                        <!-- S: BODY 서브페이지 -->
-                        <div class="lnb_bg">
-                            <ul class="lnb_depth3">
-                                <li><a href="#"><img src="./images/body/deo.png" alt=""><p>퍼퓸 데오드란트</p></a></li>
-                                <li><a href="#"><img src="./images/body/body.png" alt=""><p>샤워리바디</p></a></li>
-                                <li><a href="#"><img src="./images/body/handbody.png" alt=""><p>퍼퓸드 핸드앤바디</p></a></li>
-                            </ul>
-                        </div>
-                        <!-- E: BODY 서브페이지 -->
-                    </li>
-                    <li><a href="#">HOME FRAGRANCE</a>
-                        <!-- S: HOME FRAGRANCE 서브페이지 -->
-                        <div class="lnb_bg">
-                            <ul class="lnb_depth4">
-                                <li><a href="#"><img src="./images/home_fragrance/car.png" alt="카디퓨저"><p>카 디퓨저</p></a></li>
-                                <li><a href="#"><img src="./images/home_fragrance/home.png" alt="룸 프래그런스"><p>룸 프래그런스</p></a></li>
-                                <li><a href="#"><img src="./images/home_fragrance/candle.png" alt="퍼퓸 캔들"><p>퍼퓸 캔들</p></a></li>
-                            </ul>
-                        </div>
-                        <!-- E: HOME FRAGRANCE 서브페이지 -->
-                    </li>
-                    <li><a href="#">STORE</a>
-                    <!-- S: STORE 서브페이지 -->
-                    <div class="lnb_bg">
-                        <ul class="lnb_depth5">
-                            <li><a href="#"><img src="./images/store/kr.png" alt="대한민국 팝업스토어"><p>대한민국</p></a></li>
-                            <li><a href="#"><img src="./images/store/jp.png" alt="일본 팝업스토어"><p>일본</p></a></li>
-                            <li><a href="#"><img src="./images/store/ch.png" alt="중국 팝업스토어"><p>중국</p></a></li>
-                            <li><a href="#"><img src="./images/store/gallery.png" alt="전시"><p>전시</p></a></li>
-                        </ul>
-                    </div>
-                    <!-- E: STORE 서브페이지 -->
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    </div>
+    <div id="line_ad_wrap"> <!-- 띠배너 제작 시작-->
+        <div class="line_ad_contents">
+            <p>3만원이상 구매시 무료 배송 | 전 제품 구매시 ‘퍼퓸 보타리 2mL’ 증정 이벤트</p>
+            <a href="#"><img src="#" alt="띠 배너 닫기">X</a>
+        </div>
+    </div> <!-- 띠배너 끝 -->
+    <header>
+        <div id="top_wrap"><!-- 헤더 큰 묶음 시작 -->
+                <h1> <!-- 로고 : 로고클릭시 메인페이지로 이동 -->
+                    <a href="./index.html"><img src="./images/logo01.png" alt="탬버린즈 로고"></a>
+                </h1>
+                <div id="gnb"> <!-- gnb 카테고리 시작 (고정되는 헤더 카테고리)-->
+                    <ul class="category">
+                        <li><a href="#">PERFUME</a></li>
+                        <li><a href="#">HAND&LIP</a></li>
+                        <li><a href="#">BODY</a></li>
+                        <li><a href="#">HOME FRAGRANCE</a></li>
+                        <li><a href="#">STORE</a></li>
+                    </ul>
+                </div> <!-- gnb 카테고리 끝 -->
+                <div id="lnb_wrap"> <!-- lnb 큰 묶음 시작 -->
+                    <ul class="lnb lnb_perfume"> <!-- lnb 퍼퓸 카테고리 시작 (마우스호버시 보이는 영역) -->
+                        <li><a href="#"><img src="./images/perfume/bottari_01.png" alt="보타리 신제품">신제품</a></li>
+                        <li><a href="#"><img src="./images/perfume/perfume_01.png" alt="퍼퓸 상품">퍼퓸</a></li>
+                        <li><a href="#"><img src="./images/perfume/perfumeoil_01.png" alt="퍼퓸 오일 상품">퍼퓸 오일</a></li>
+                        <li><a href="#"><img src="./images/perfume/perfumebalm_01.png" alt="퍼퓸밤 상품">퍼퓸 밤</a></li>
+                        <li><a href="#"><img src="./images/perfume/perfumewear_01.png" alt="퍼퓸 웨어 상품 ">퍼퓸 웨어</a></li>
+                    </ul><!-- lnb 퍼퓸 카테고리 끝(마우스호버시 보이는 영역) -->
+                    <ul class="lnb lnb_handlip"> <!-- lnb 핸드앤립 카테고리 시작 -->
+                        <li><a href="#"><img src="./images/hand&lip/handlip_01.png" alt="쉘 퍼퓸 핸드 상품">쉘 퍼퓸 핸드</a></li>
+                        <li><a href="#"><img src="./images/hand&lip/handlip_02.png" alt="에그 립밤 상품">에그 립밤</a></li>
+                        <li><a href="#"><img src="./images/hand&lip/hadlip_03.png" alt="체인 핸드 상품">체인 핸드</a></li>
+                        <li><a href="#"><img src="./images/hand&lip/handlip_04.png" alt="핸드앤립 웨어 상품">핸드앤립 웨어</a></li>
+                    </ul><!-- lnb 핸드앤립 카테고리 끝 -->
+                    <ul class="lnb lnb_body"> <!-- lnb 바디 카테고리 시작 -->
+                        <li><a href="#"><img src="./images/body/body.png" alt="샤워리바디 상품">샤워리바디</a></li>
+                        <li><a href="#"><img src="./images/body/handbody.png" alt="퍼퓸드 핸드앤바디 상품">퍼퓸드 핸드앤바디</a></li>
+                    </ul><!-- lnb 바디 카테고리 끝 -->
+                    <ul class="lnb lnb_home_f"> <!-- lnb 홈 프래그런스 카테고리 시작 -->
+                        <li><a href="#"><img src="./images/home_fragrance/car.png" alt="카디퓨저 상품">카 디퓨저</a></li>
+                        <li><a href="#"><img src="./images/home_fragrance/home.png" alt="룸 프래그런스 상품">룸 프래그런스</a></li>
+                        <li><a href="#"><img src="./images/home_fragrance/candle.png" alt="체인 핸드 상품">퍼퓸 캔들</a></li>
+                    </ul><!-- lnb  홈 프래그런스 카테고리 끝 -->
+                    <ul class="lnb lnb_store"> <!-- lnb 스토어 카테고리 시작 -->
+                        <li><a href="#"><img src="./images/store/kr.png" alt="대한민국 스토어">대한민국</a></li>
+                        <li><a href="#"><img src="./images/store/jp.png" alt="일본 스토어">일본</a></li>
+                        <li><a href="#"><img src="./images/store/ch.png" alt="중국 스토어">중국</a></li>
+                        <li><a href="#"><img src="./images/store/gallery.png" alt="전시">전시</a></li>
+                    </ul><!-- lnb  홈 스토어 카테고리 끝 -->
+                </div> <!-- lnb 큰 묶음 끝 -->
+            </div>
+    </header>
 </body>
 </html>
