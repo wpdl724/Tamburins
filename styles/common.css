@@ -1,14 +1,100 @@
 /* common.css : 헤더 , 푸터 CSS 작성 */
 
 /* 헤더 CSS */
-header {
-    
-}
-header #top_wrap { 
-    /* background-color: chartreuse; */
-    
-}
+header {}
+header #top_wrap /* 헤더 큰 묶음 */{ }
 
+/* S: 띠 배너 시작 */
+header #top_wrap #line_ad_wrap {background-color: #000;}
+header #top_wrap #line_ad_wrap .line_ad_contents {}
+header #top_wrap #line_ad_wrap .line_ad_contents p {}
+header #top_wrap #line_ad_wrap .line_ad_contents a {}
+header #top_wrap #line_ad_wrap .line_ad_contents a img {}
+/* E: 띠배너 끝 */
+
+/* S: 로고 위치 시작 */
+header #top_wrap h1 {}
+header #top_wrap h1 a {}
+header #top_wrap h1 a img {}
+/* E: 로고 위치 끝 */
+
+/* S: nav 시작 */
+header #top_wrap .menu {}
+
+/* gnb 카테고리 시작(고정되는 헤더 카테고리 영역) - gnb_wrap */
+header #top_wrap .menu #gnb_wrap {}
+
+/* 메뉴 리스트 시작 */
+header #top_wrap .menu #gnb_wrap .category {}
+header #top_wrap .menu #gnb_wrap .category li {}
+header #top_wrap .menu #gnb_wrap .category li a {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg {}
+
+/* 1. lnb lnb_perfume (퍼퓸 카테고리 시작) */
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume{}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a img {}
+/* 1. lnb lnb_perfume (퍼퓸 카테고리 끝) */
+
+/* 2. lnb_handlip (핸드앤립 카테고리 시작) */
+header #top_wrap .menu #gnb_wrap .category li {}
+header #top_wrap .menu #gnb_wrap .category li a {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_handlip {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_handlip li {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_handlip li a {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_handlip li a img {}
+/* 2. lnb_handlip (핸드앤립 카테고리 끝) */
+
+/* 3. lnb_body (바디 카테고리 시작) */
+header #top_wrap .menu #gnb_wrap .category li {}
+header #top_wrap .menu #gnb_wrap .category li a {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_body {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_body li {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_body li a {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_body li a img {}
+/* 3. lnb_body (바디 카테고리 끝) */
+
+/* 4. lnb_home_f (홈 프래그런스 카테고리 시작) */
+header #top_wrap .menu #gnb_wrap .category li {}
+header #top_wrap .menu #gnb_wrap .category li a {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f li {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f li a {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f li a img {}
+/* 4. lnb_home_f (홈 프래그런스 카테고리 끝) */
+
+/* 5. lnb_store (스토어 카테고리 시작) */
+header #top_wrap .menu #gnb_wrap .category li {}
+header #top_wrap .menu #gnb_wrap .category li a {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li a {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li a img {}
+/* 5. lnb_store (스토어 카테고리 끝) / gnb_wrap 끝*/
+
+/* 검색창 시작 */
+header #top_wrap .menu #user_menu {}
+header #top_wrap .menu #user_menu .search {}
+header #top_wrap .menu #user_menu .search input {}
+header #top_wrap .menu #user_menu .search input .search_btn {}
+header #top_wrap .menu #user_menu .search input .search_btn img {}
+/* 검색창 끝 */
+
+/* 언어변경 */
+header #top_wrap .menu #user_menu .right_menu{}
+header #top_wrap .menu #user_menu .right_menu a {}
+header #top_wrap .menu #user_menu .right_menu a img{}
+/* 로그인 */
+/* 장바구니 */
+
+
+
+/* --------------------------------------------------다시 시작----------------------------- */
 /* S: 띠배너 영역  */
 header #line_ad_wrap {background-color: #000; }
 header .line_ad_contents{}
