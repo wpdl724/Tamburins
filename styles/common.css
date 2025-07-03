@@ -1,26 +1,116 @@
-/* 탬버린즈 common.css  */
-/* 헤더 + gnb + lnb CSS */
+/* common.css : 헤더 , 푸터 CSS 작성 */
 
-#wrap{
-    width: 1500px;
+/* 헤더 CSS */
+header {
+    
 }
-#wrap header {
-    display:flex;
+header #top_wrap { 
+    /* background-color: chartreuse; */
+    
+}
+
+/* S: 띠배너 영역  */
+header #line_ad_wrap {background-color: #000; }
+header .line_ad_contents{}
+header .line_ad_contents p {
+    text-align: center; width: 100%; height: 40px; line-height: 40px; color: #fff; font-size: 0.875rem; font-weight: 200;
+}
+header .line_ad_contents a {
+    position: absolute; right:0; top:10px;
+    /* background-color: red; */
+    
+}
+header .line_ad_contents a img {}
+/* E: 띠배너 영역  */
+
+/* S: 헤더 - 메뉴(네비) 영역 */
+header .menu {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
     flex-flow: row nowrap;
-    position: relative;
 }
-#wrap header a img {
-    position: 
+header .menu h1 {/* 로고 */
+    /* background-color: aqua;  */
+    width:220px; height: 40px;
+}
+header .menu h1 a {padding: 20;} 
+header .menu h1 a img {
+    width: 100%;
+}
+/* E: 헤더 - 메뉴 영역 */
+
+/* S: gnb_wrap 카테고리 시작 (고정되는 헤더 카테고리) */
+header .menu #gnb_wrap{}
+header .menu #gnb_wrap .category{
+    /* background-color: brown; */
+    margin-top: 15px;
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap; width:594px;
+}
+header .menu #gnb_wrap .category li{
+    margin: 0 auto;
+}
+header .menu #gnb_wrap .category li a {
+    font-size: 1.2rem;
+}
+/* E: gnb 카테고리 시작 (고정되는 헤더 카테고리) */
+
+/* S: user_memu (검색창) */
+header .menu #user_menu {
+    display: flex; flex-flow: row nowrap;}
+header .menu #user_menu .search {position: relative;} 
+header .menu #user_menu .search input{ 
+    border-bottom: 1px solid #000;
+    background: transparent;
+    align-items: center;
+    margin: 15px;
+    padding: 2px;
+} 
+header .menu #user_menu .search .search_btn {
+    position: absolute; top: 0; right: 2px; 
+    margin: 15px;
+} 
+header .menu #user_menu .search .search_btn img{width: 20px;} 
+/* E: user_memu (검색창)  */
+
+/* S: user_memu (언어변경,로그인,장바구니) */
+header .menu #user_menu .right_menu{
+    /* background-color: red; */
+    margin-left: 15px;
+} 
+header .menu #user_menu .right_menu a{
+} 
+header .menu #user_menu .right_menu a img{
+    margin: 10px; 
+} 
+/* E: user_memu (언어변경,로그인,장바구니) */
+
+/* S: lnb 영역 */
+header #lnb_wrap {}
+header #lnb_wrap .lnb {}
+header #lnb_wrap .lnb_perfume {
+    display: flex; flex-flow: row nowrap;
+    background-color: lime;
+
+}
+header #lnb_wrap .lnb_perfume li {
+    margin: 20px;
+}
+header #lnb_wrap .lnb_perfume li a {}
+header #lnb_wrap .lnb_perfume li img {}
+header #lnb_wrap .lnb_perfume li a p {
+    
 }
 
-#wrap header nav {}
-#wrap header nav .gnb{}
-#wrap header nav .gnb > li {}
-#wrap header nav .gnb > li > a {}
+header #lnb_wrap .lnb_handlip {display: none;}
+header #lnb_wrap .lnb_body {display: none;}
+header #lnb_wrap .lnb_home_f {display: none;}
+header #lnb_wrap .lnb_store {display: none;}
+/* E: lnb 영역 */
 
-#wrap header nav .gnb > li .lnb_bg{}
-#wrap header nav .gnb > li .lnb_bg .lnb_depth1 li {}
-#wrap header nav .gnb > li .lnb_bg .lnb_depth1 li a {}
-#wrap header nav .gnb > li .lnb_bg .lnb_depth1 li a p {}
-
-/* ------------------- 퍼퓸 카테고리 끝 */
+/* 검색창 - 파란색 X표시 제거 */
+.search input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
