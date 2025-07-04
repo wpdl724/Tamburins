@@ -3,16 +3,16 @@
 /* 헤더 CSS */
 header {
     width: 100%;
-    height: 100px;
-    
+    padding:auto;  
 }
 header #top_wrap /* 헤더 큰 묶음 */{ 
-    /* background-color: blue; */
+    background-color: yellow;
     display:flex;
     flex-flow: row nowrap;
     margin: 0 auto;
     padding: 0 96px;
-    justify-content: space-between;
+    position: relative;
+    
 }
 
 /* S: 띠 배너 시작 */
@@ -27,55 +27,60 @@ header  #line_ad_wrap .line_ad_contents a img {}
 /* E: 띠배너 끝 */
 
 /* S: 로고 위치 시작 */
-header #top_wrap h1 {
-    /* background-color: lime;  */
-    margin-top: 10px;
-}
-header #top_wrap h1 a {
-    
-}
+header #top_wrap h1 {}
+header #top_wrap h1 a {}
 header #top_wrap h1 a img {
-    margin-top: 10px;
 }
 /* E: 로고 위치 끝 */
 
-/* S: nav 시작 */
+/* S: nav 시작 (로그인 등등과의 형제)*/
 header #top_wrap .menu {
-    /* background-color: lime; */
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    gap: 347px;
-    
-    
 }
+
 
 /* gnb 카테고리 시작(고정되는 헤더 카테고리 영역) - gnb_wrap */
-header #top_wrap .menu #gnb_wrap {}
+header #top_wrap .menu #gnb_wrap {
+    background-color: red;
+    
+}
 
-/* 메뉴 리스트 시작 */
+
+/* 메뉴(ul 카테고리) 리스트 시작 */
 header #top_wrap .menu #gnb_wrap .category {
-    /* background-color: turquoise; */
     display: flex;
-    flex-flow: row nowrap; width: 594px;
-    margin-top: 10px;
+    margin-right: 50px;
+
 }
 header #top_wrap .menu #gnb_wrap .category li {
-    margin: 0 auto;
+    margin-right: 50px;
 }
-header #top_wrap .menu #gnb_wrap .category li a {
-    /* background-color: brown; */
-    line-height: 60px;
+header #top_wrap .menu #gnb_wrap .category li a {}
+
+/* 공통선택자 lnb */
+header #top_wrap .menu #gnb_wrap .category .lnb{
+    display: flex;
 }
+/*  */
+
 header #top_wrap .menu #gnb_wrap .category .lnb_bg {
+    position: absolute; left: 96px; top:100px;
 
 }
 
 /* 1. lnb lnb_perfume (퍼퓸 카테고리 시작) */
-header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume{}
-header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li {display: none;}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume{
+    position: absolute;
+}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li {
+
+}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a img {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a p {
+
+}
+
 /* 1. lnb lnb_perfume (퍼퓸 카테고리 끝) */
 
 /* 2. lnb_handlip (핸드앤립 카테고리 시작) */
@@ -121,6 +126,7 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li a img {}
 /* 검색창 시작 */
 header #top_wrap .menu #user_menu {
     display: flex;
+    
 }
 header #top_wrap .menu #user_menu .search {
     /* background-color: rgb(204, 191, 218); */
@@ -132,14 +138,19 @@ header #top_wrap .menu #user_menu .search {
 header #top_wrap .menu #user_menu .search input {
     background: transparent;
     border-bottom: 1px solid #000;
-    align-items: center;
+    /* align-items: center;/ */
     /* margin: 15px; */
-    padding: 5px;
+    padding: 5px;    
 }
 header #top_wrap .menu #user_menu .search .search_btn {
-    position: absolute; top: 0; bottom: 0; right: 2px;
+    top: 0; bottom: 0; right: 2px;
+    /* background-color: turquoise; */
+    margin-left:-20px;
+    margin-top: 0px;
 }
-header #top_wrap .menu #user_menu .search .search_btn img { width: 100%;}
+header #top_wrap .menu #user_menu .search .search_btn img { 
+    margin-bottom: -5px;
+}
 /* 검색창 끝 */
 
 /* 오른쪽 user_menu */
