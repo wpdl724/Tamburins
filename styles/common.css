@@ -4,55 +4,72 @@
 header {
     width: 100%;
     height: 100px;
+    
 }
-header #top_wrap /* 헤더 큰 묶음 */{ }
+header #top_wrap /* 헤더 큰 묶음 */{ 
+    /* background-color: blue; */
+    display:flex;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+    padding: 0 96px;
+    justify-content: space-between;
+}
 
 /* S: 띠 배너 시작 */
-header #top_wrap #line_ad_wrap {background-color: #000;}
-header #top_wrap #line_ad_wrap .line_ad_contents {}
-header #top_wrap #line_ad_wrap .line_ad_contents p {
-    background-color: red;
+header #line_ad_wrap {background-color: #000;}
+header #line_ad_wrap .line_ad_contents {}
+header #line_ad_wrap .line_ad_contents p {
+    background-color: #000;
     text-align: center; width: 100%; height: 40px; line-height: 40px; color: #fff; font-size: 0.875rem; font-weight: 200;
 }
-header #top_wrap #line_ad_wrap .line_ad_contents a {
-    position: absolute; right:0; top:10px;
-
-}
-header #top_wrap #line_ad_wrap .line_ad_contents a img {}
+header  #line_ad_wrap .line_ad_contents a {position: absolute; right:0; top:10px;}
+header  #line_ad_wrap .line_ad_contents a img {}
 /* E: 띠배너 끝 */
 
 /* S: 로고 위치 시작 */
-header #top_wrap h1 {background-color: blue;}
-header #top_wrap h1 a {
-    width:220px; height: 40px;
-    padding: 96px;
+header #top_wrap h1 {
+    /* background-color: lime;  */
+    margin-top: 10px;
 }
-header #top_wrap h1 a img {}
+header #top_wrap h1 a {
+    
+}
+header #top_wrap h1 a img {
+    margin-top: 10px;
+}
 /* E: 로고 위치 끝 */
 
 /* S: nav 시작 */
 header #top_wrap .menu {
-    background-color: lime;
-    padding: 20px;
+    /* background-color: lime; */
     display: flex;
-    justify-content: space-around;
     flex-flow: row nowrap;
+    justify-content: space-around;
+    gap: 347px;
+    
+    
 }
 
 /* gnb 카테고리 시작(고정되는 헤더 카테고리 영역) - gnb_wrap */
-header #top_wrap .menu #gnb_wrap {
-}
+header #top_wrap .menu #gnb_wrap {}
 
 /* 메뉴 리스트 시작 */
 header #top_wrap .menu #gnb_wrap .category {
+    /* background-color: turquoise; */
     display: flex;
     flex-flow: row nowrap; width: 594px;
+    margin-top: 10px;
 }
 header #top_wrap .menu #gnb_wrap .category li {
     margin: 0 auto;
 }
-header #top_wrap .menu #gnb_wrap .category li a {}
-header #top_wrap .menu #gnb_wrap .category .lnb_bg {}
+header #top_wrap .menu #gnb_wrap .category li a {
+    /* background-color: brown; */
+    line-height: 60px;
+}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg {
+
+}
 
 /* 1. lnb lnb_perfume (퍼퓸 카테고리 시작) */
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume{}
@@ -103,38 +120,55 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li a img {}
 
 /* 검색창 시작 */
 header #top_wrap .menu #user_menu {
-    border: 1px solid teal;
     display: flex;
 }
 header #top_wrap .menu #user_menu .search {
-    background-color: rgb(204, 191, 218);
-    
+    /* background-color: rgb(204, 191, 218); */
+    margin-top: 20px;
+    position: relative;
+    line-height: 40px;
 }
     
-header #top_wrap .menu #user_menu .search input {}
-header #top_wrap .menu #user_menu .search input .search_btn {
-    position: absolute; top: 0; right: 2px;
+header #top_wrap .menu #user_menu .search input {
+    background: transparent;
+    border-bottom: 1px solid #000;
+    align-items: center;
+    /* margin: 15px; */
+    padding: 5px;
 }
-header #top_wrap .menu #user_menu .search input .search_btn img {}
+header #top_wrap .menu #user_menu .search .search_btn {
+    position: absolute; top: 0; bottom: 0; right: 2px;
+}
+header #top_wrap .menu #user_menu .search .search_btn img { width: 100%;}
 /* 검색창 끝 */
 
 /* 오른쪽 user_menu */
 header #top_wrap .menu #user_menu .right_menu{ 
-    background-color: skyblue;
-    margin-left: 15px;
+    /* background-color: skyblue; */
+    margin-left: 20px;
+    line-height: 40px;
+    margin-top: 30px;
 }
 header #top_wrap .menu #user_menu .right_menu a {
     margin-right: 10px;
 }
 
 /* 언어변경 */
-header #top_wrap .menu #user_menu .right_menu a .lang{}
+header #top_wrap .menu #user_menu .right_menu a .lang{
+    background-color: aqua;
+    margin-right: 10px;
+}
 
 /* 로그인 */
-header #top_wrap .menu #user_menu .right_menu a .login {}
+header #top_wrap .menu #user_menu .right_menu a .login {
+    background-color: tan;
+    margin-right: 10px;
+}
 
 /* 장바구니 */
-header #top_wrap .menu #user_menu .right_menu a .cart {}
+header #top_wrap .menu #user_menu .right_menu a .cart {
+    background-color: tomato;
+}
 
 
 /* 검색창 - 파란색 X표시 제거 */
