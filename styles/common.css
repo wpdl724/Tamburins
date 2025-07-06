@@ -1,83 +1,120 @@
 /* common.css : 헤더 , 푸터 CSS 작성 */
 
-/* 헤더 CSS */
+/* -----------------  헤더 CSS  ----------------------  */
 header {
     width: 100%;
-    padding:auto;  
-}
-header #top_wrap /* 헤더 큰 묶음 */{ 
-    background-color: yellow;
-    display:flex;
-    flex-flow: row nowrap;
     margin: 0 auto;
     padding: 0 96px;
+}
+header #top_wrap /* 헤더 큰 묶음 */{ 
+    background-color: rgb(255, 255, 172); /* 위치 확인용 색상 */
+    display:flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    /* margin: 0 auto; */
+    /* padding: 0 96px; 지운이유 헤더 전체에 96 패딩값을 줌*/
     position: relative;
-    
 }
 
-/* S: 띠 배너 시작 */
-header #line_ad_wrap {background-color: #000;}
-header #line_ad_wrap .line_ad_contents {}
+/*  =======================================================  S: 띠 배너 시작 */
+header #line_ad_wrap {
+    background-color: rgb(254, 146, 52); /* 위치 확인용 색상 */
+    /* background-color: #000; */
+}
+header #line_ad_wrap .line_ad_contents {
+    position: relative;
+}
 header #line_ad_wrap .line_ad_contents p {
-    background-color: #000;
     text-align: center; width: 100%; height: 40px; line-height: 40px; color: #fff; font-size: 0.875rem; font-weight: 200;
 }
 header  #line_ad_wrap .line_ad_contents a {position: absolute; right:0; top:10px;}
 header  #line_ad_wrap .line_ad_contents a img {}
-/* E: 띠배너 끝 */
+/*  ========================================================== E: 띠배너 끝 */
 
-/* S: 로고 위치 시작 */
-header #top_wrap h1 {}
-header #top_wrap h1 a {}
-header #top_wrap h1 a img {
+/* ========================================================= S: 로고 위치 시작 */
+header #top_wrap h1 {
+    background-color: brown; /* 위치 확인용 색상 */
+    width: 220px; padding-top: 20px;
 }
+header #top_wrap h1 a {
+    /* margin-right: 325px; 지우니깐 아무런 변화 없음 */
+}
+header #top_wrap h1 a img {}
 /* E: 로고 위치 끝 */
 
 /* S: nav 시작 (로그인 등등과의 형제)*/
 header #top_wrap .menu {
+    background-color: rgb(118, 242, 178); /* 위치 확인용 색상 */
     display: flex;
 }
 
-
 /* gnb 카테고리 시작(고정되는 헤더 카테고리 영역) - gnb_wrap */
 header #top_wrap .menu #gnb_wrap {
-    background-color: red;
+    background-color: rgb(233, 130, 233); /* 위치 확인용 색상 */
+    display: flex;
+    justify-content: center;
+    /* padding-left: 500px; */
+    padding-right: 53px;
     
 }
 
 
 /* 메뉴(ul 카테고리) 리스트 시작 */
-header #top_wrap .menu #gnb_wrap .category {
+header #top_wrap .menu #gnb_wrap .category {/* 네비 카테고리 */
+    background-color: lime; /* 위치 확인용 색상 */
     display: flex;
-    margin-right: 50px;
+    flex-flow: row nowrap;
+    padding: 30px;/* 설정하니깐 네비 카테고리 가운데 정렬됨  */
+    padding-right: 303px;
+    
+}
+header #top_wrap .menu #gnb_wrap .category li {/* 네비+lnb 전체묶음영역  */
+    background-color: rgb(133, 96, 227); /* 위치 확인용 색상 */
+        margin-right: 50px;
+}
+header #top_wrap .menu #gnb_wrap .category li a {
+    /* background-color: skyblue; */
+    position: relative;
+}
 
-}
-header #top_wrap .menu #gnb_wrap .category li {
-    margin-right: 50px;
-}
-header #top_wrap .menu #gnb_wrap .category li a {}
 
 /* 공통선택자 lnb */
-header #top_wrap .menu #gnb_wrap .category .lnb{
+header #top_wrap .menu #gnb_wrap .category .lnb{ /* lnb 부모 */
     display: flex;
+    /* position: absolute; 추가 */
+    /* background-color: aqua; */
+    padding-bottom: 20px; padding-top: 20px;
 }
 /*  */
 
-header #top_wrap .menu #gnb_wrap .category .lnb_bg {
-    position: absolute; left: 96px; top:100px;
-
+header #top_wrap .menu #gnb_wrap .category .lnb_bg { /* 네비 누르면 나오는 카테고리 이미지 (자식) */
+    position: absolute; left:0; top:80px;
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
 }
 
+header #top_wrap .menu #gnb_wrap .category li:hover .lnb_bg {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
 /* 1. lnb lnb_perfume (퍼퓸 카테고리 시작) */
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume{
-    position: absolute;
+    /* position: absolute; */
+    
 }
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li {
+  
 
 }
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a img {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a p {
+    font-size: 1rem;
+    text-align: center;
+    padding: 10px;
 
 }
 
@@ -160,29 +197,25 @@ header #top_wrap .menu #user_menu .right_menu{
     line-height: 40px;
     margin-top: 30px;
 }
-header #top_wrap .menu #user_menu .right_menu a {
-    margin-right: 10px;
-}
+header #top_wrap .menu #user_menu .right_menu a {}
 
 /* 언어변경 */
 header #top_wrap .menu #user_menu .right_menu a .lang{
-    background-color: aqua;
     margin-right: 10px;
 }
 
 /* 로그인 */
 header #top_wrap .menu #user_menu .right_menu a .login {
-    background-color: tan;
     margin-right: 10px;
 }
 
 /* 장바구니 */
-header #top_wrap .menu #user_menu .right_menu a .cart {
-    background-color: tomato;
-}
+header #top_wrap .menu #user_menu .right_menu a .cart {}
 
 
 /* 검색창 - 파란색 X표시 제거 */
 .search input[type="search"]::-webkit-search-cancel-button {
     display: none;
 }
+
+/* --------------------------- 푸터 css --------------------------*/

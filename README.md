@@ -7,3 +7,8 @@
 * 'SUIT', sans-serif
 * 'Platypi', serif
 
+## common.css 
+* header, footer css 디자인
+
+## index.css 
+* main , section css 디자인
