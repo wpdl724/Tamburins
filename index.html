@@ -4,11 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambusins | main </title>
-    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <!-- 플러그인 필수 CSS cdn 연결 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">    <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/respon.css">
     <link rel="stylesheet" href="./styles/index.css">
     <script src="./scripts/index.js" defer></script>
+    <!-- 플러그인 필수 JS cdn 연결 -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <!-- 헤더 시작 -->
@@ -20,7 +29,7 @@
             </div>
         </div> <!-- 띠배너 끝 -->
         <div id="top_wrap"><!-- 헤더 큰 묶음 시작 -->
-            <h1> <!-- 로고 : 로고클릭시 메인페이지로 이동 --><a href="./index.html"><img src="./images/logo01.png" alt="탬버린즈 로고"></a></h1>
+            <h1> <!-- 로고 : 로고클릭시 메인페이지로 이동 --><a href="#"><img src="./images/logo01.png" alt="탬버린즈 로고"></a></h1>
             <nav class="menu">
                 <div id="gnb_wrap"> <!-- gnb 카테고리 시작 (고정되는 헤더 카테고리)-->
                     <ul class="category"> <!-- 메뉴 리스트 -->
@@ -82,13 +91,13 @@
                     <div class="search">
                         <input type="search" placeholder="">
                         <button type="submit" class="search_btn">
-                            <img src="./images/icons/search_b.png" alt="검색하기 버튼">
+                            <img src="./images/icons/white_s.png" alt="검색하기 버튼">
                         </button>
                     </div>
                     <div class="right_menu">
                         <a href="#"><img src="./images/icons/lang.png" class="lang"  alt="언어변경"></a>
                         <a href="#"><img src="./images/icons/login_b.png" class="login" alt="로그인"></a>
-                        <a href="#"><img src="./images/icons/cart_b.png" class="cart" alt="장바구니"></a>
+                        <a href="#"><img src="./images/icons/cart_white.png" class="cart" alt="장바구니"></a>
                     </div>
                 </div>
             </nav>
@@ -99,14 +108,37 @@
             <video autoplay muted loop playsinline>
                 <source src="./videos/video_02.mp4">
         </section><!-- E: 1행 광고영상 배너 -->
-
-        <section><!-- S: 2행 신제품 소개 스와이퍼 -->
+        <section class="new_product"><!-- S: 2행 신제품 소개 스와이퍼 -->
+            <h1>NEW FRAGRANCE</h1>
+            <p>BOTTARI</p>
+            <div class="new_wrap">
+                <div class="swiper" id="new">
+                    <!--필수-->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1">
+                            <a href="#" class="new_01">
+                                <img src="./images/new_fragrance/new_01.png" id = "porduct"alt="신제품_1">
+                                <img src="./images/icons/new_cart.png" id ="cart" alt="장바구니 아이콘">
+                                <div class="txt_box">
+                                    <h4>퍼퓸 보타리</h4>
+                                    <p>시원한 아키갈라우드 | 부드러운 이끼와 버섯 | 앰버 머스크</p>
+                                    <p><span>₩ 178,000 </span></p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide2">slide2</div>
+                        <div class="swiper-slide slide3">slide3</div>
+                    </div>
+                    <!--필요 시 사용(선택)-->
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </section><!-- E: 2행 신제품 소개 스와이퍼 -->
     </main>
     <footer> <!-- 푸터 시작 -->
-        <div id="footer_wrap">
-
-        </div>
+        <div id="footer_wrap"></div>
     </footer> <!-- 푸터 끝 -->
 </body>
 </html>
