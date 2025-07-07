@@ -11,15 +11,12 @@ header #top_wrap /* 헤더 큰 묶음 */{
     display:flex;
     justify-content: space-between;
     flex-flow: row nowrap;
-    /* margin: 0 auto; */
-    /* padding: 0 96px; 지운이유 헤더 전체에 96 패딩값을 줌*/
     position: relative;
 }
 
 /*  =======================================================  S: 띠 배너 시작 */
 header #line_ad_wrap {
     background-color: rgb(254, 146, 52); /* 위치 확인용 색상 */
-    /* background-color: #000; */
 }
 header #line_ad_wrap .line_ad_contents {
     position: relative;
@@ -35,7 +32,8 @@ header  #line_ad_wrap .line_ad_contents a img {}
 header #top_wrap{padding-left: 96px; padding-right: 96px;}
 header #top_wrap h1 {
     background-color: brown; /* 위치 확인용 색상 */
-    width: 220px; padding-top: 20px;
+    width: 220px; padding-top: 10px;
+    
 }
 header #top_wrap h1 a {
     /* margin-right: 325px; 지우니깐 아무런 변화 없음 */
@@ -55,9 +53,9 @@ header #top_wrap .menu {
 header #top_wrap .menu #gnb_wrap {
     background-color: rgb(233, 130, 233); /* 위치 확인용 색상 */
     display: flex;
-    justify-content: center;
-    /* padding-left: 500px; */
-    padding-right: 53px;
+    margin-right: 300px;
+    justify-content: start;
+    
 }
 
 
@@ -66,26 +64,25 @@ header #top_wrap .menu #gnb_wrap .category {/* 네비 카테고리 */
     background-color: lime; /* 위치 확인용 색상 */
     display: flex;
     flex-flow: row nowrap;
-    /*padding: 30px;설정하니깐 네비 카테고리 가운데 정렬됨  */
-    /* padding-right: 303px; */
-    position: relative;
-    
+    width: 100%;
+    /* margin-top: 20px;   */
 }
 header #top_wrap .menu #gnb_wrap .category li {/* 네비+lnb 전체묶음영역  */
     background-color: rgb(133, 96, 227); /* 위치 확인용 색상 */
     margin-right: 50px; 
-    /* position: absolute;  */
-    
+    /* line-height: 70px; */
 }
 header #top_wrap .menu #gnb_wrap .category li a {
-    margin: auto;
 }
-
+header #top_wrap .menu #gnb_wrap .category > li {
+    background-color: lightsalmon;
+    padding-top: 20px;
+}
 
 /* ---------------------  공통선택자 lnb ---------------------*/
 header #top_wrap .menu #gnb_wrap .category .lnb{ /* lnb 부모 */
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 header #top_wrap .menu #gnb_wrap .category .lnb li {}
@@ -96,25 +93,26 @@ header #top_wrap .menu #gnb_wrap .category .lnb li a p{
 
 /* ------------------------------------------------------------------  */
 
-
 header #top_wrap .menu #gnb_wrap .category .lnb_bg { /* 네비 누르면 나오는 카테고리 이미지 (자식) */
-    position: absolute; left:0; top:80px;
-    display: none;
-    opacity: 0;
-    visibility: hidden;
+    display: block;
+    background-color: aqua;
+    position: absolute; 
+    width: 100%;
+    left:0; top:60px;
     transition: all 0.3s ease;
-    
+    z-index: 1000;
+    padding-left: 96px;
+    padding-top: 30.5px;
 }
 
-header #top_wrap .menu #gnb_wrap .category li:hover .lnb_bg {
-    display: block;
-    opacity: 1;
-    visibility: visible;
+header #top_wrap .menu #gnb_wrap .category > li:hover .lnb_bg {
 }
 
 /* ====================================================== 1. lnb lnb_perfume (퍼퓸 카테고리 시작) */
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume{}
-header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li {
+    
+}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a img {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a img #perfume_01 {}
@@ -126,7 +124,7 @@ header #top_wrap .menu #gnb_wrap .category li {}
 header #top_wrap .menu #gnb_wrap .category li a {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_handlip {
-    /* display: flex; */
+    display: none;
 }
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_handlip li {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_handlip li a {}
@@ -141,7 +139,8 @@ header #top_wrap .menu #gnb_wrap .category li {}
 header #top_wrap .menu #gnb_wrap .category li a {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_body {
-    display: flex;
+    display: none;
+
 }
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_body li {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_body li a {}
@@ -151,11 +150,11 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_body li a p {}
 
 /* 4. lnb_home_f (홈 프래그런스 카테고리 시작) */
 header #top_wrap .menu #gnb_wrap .category li {
-    display: flex;
 }
 header #top_wrap .menu #gnb_wrap .category li a {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg {}
-header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f {    display: none;
+}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f li {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f li a {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f li a img {}
@@ -164,12 +163,16 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f li a {}
 
 /* 5. lnb_store (스토어 카테고리 시작) */
 header #top_wrap .menu #gnb_wrap .category li {
-    display: flex;
 }
 header #top_wrap .menu #gnb_wrap .category li a {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg {}
-header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store {}
-header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store {
+    display: none;
+
+}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li {
+
+}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li a {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li a img {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li a p {}
