@@ -27,9 +27,14 @@ header #line_ad_wrap {
 header #line_ad_wrap .line_ad_contents {
     position: relative;
     background-color: #000;
+    height: 45px;
 }
 header #line_ad_wrap .line_ad_contents p {
-    text-align: center; width: 100%; height: 40px; line-height: 40px; color: #fff; font-size: 0.875rem; font-weight: 200;
+    text-align: center; 
+    width: 100%; height: 40px; 
+    line-height: 45px; 
+    color:#fff; 
+    font-size: 0.875rem; font-weight: 200;
 }
 header  #line_ad_wrap .line_ad_contents a {position: absolute; right:0; top:10px;}
 header  #line_ad_wrap .line_ad_contents a img {
@@ -40,14 +45,14 @@ header  #line_ad_wrap .line_ad_contents a img {
 /* ========================================================= S: 로고 위치 시작 */
 header #top_wrap{padding-left: 96px; padding-right: 96px;}
 header #top_wrap h1 {
-    /* background-color: brown; 위치 확인용 색상 */
-    width: 220px; padding-top: 10px;
+    /* background-color: brown;  */
+    width: 220px; padding-top: 20px;
+    line-height: 20px;
     
 }
-header #top_wrap h1 a {
-    /* margin-right: 325px; 지우니깐 아무런 변화 없음 */
-}
+header #top_wrap h1 a {}
 header #top_wrap h1 a img {
+    width: 220px; height: 25px;
 }
 /* ============================================================== E: 로고 위치 끝 */
 
@@ -83,7 +88,9 @@ header #top_wrap .menu #gnb_wrap .category li {/* 네비+lnb 전체묶음영역 
     
 }
 header #top_wrap .menu #gnb_wrap .category li a {
-    color: #fff;
+    color: #fff; 
+    font-size: 1.2rem;
+    font-weight: 100200;
 
 }
 header #top_wrap .menu #gnb_wrap .category > li {
@@ -234,20 +241,23 @@ header #top_wrap .menu #user_menu .right_menu{
     margin-top: 10px;
 }
 header #top_wrap .menu #user_menu .right_menu a {
+    /* background-color: red; */
 }
 
 /* 언어변경 */
 header #top_wrap .menu #user_menu .right_menu a .lang{
     margin-right: 10px;
+    width: 20px; height: 20px;
 }
 
 /* 로그인 */
 header #top_wrap .menu #user_menu .right_menu a .login {
     margin-right: 10px;
+    width: 20px; height: 20px;
 }
 
 /* 장바구니 */
-header #top_wrap .menu #user_menu .right_menu a .cart { width: 24px; height: 24px;}
+header #top_wrap .menu #user_menu .right_menu a .cart { width: 20px; height: 20px;}
 
 
 /* 검색창 - 파란색 X표시 제거 */
