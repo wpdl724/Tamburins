@@ -30,6 +30,7 @@ main .new_product{
     width: 100%;
     background-color: skyblue;
     padding-bottom: 228px;
+    position: relative;
 }
 main .new_product h1{
     text-align: center;
@@ -82,20 +83,18 @@ main .new_product .new_wrap .swiper .swiper-wrapper .swiper-slide a .txt_box p {
     font-family: 'SUIT',sans-serif;
     font-size: 0.75rem;
     font-weight: 200;
-    color: #B9B9B9;
 
 
 }
 main .new_product .new_wrap .swiper .swiper-wrapper .swiper-slide a .txt_box p:nth-child(3) {
-    color: red;
     margin: 10px 0;
+    color: #B9B9B9;
+
 }
 main .new_product .new_wrap .swiper .swiper-wrapper .swiper-slide a .txt_box p span{
     font-family: 'SUIT',sans-serif;
     font-size: 0.75rem;
     font-weight: 200;
-    margin-top:     
-
 }
 /* 2행 : 스와이퍼 공통 선택자 */
 
@@ -104,18 +103,18 @@ main .new_product .new_wrap .swiper .swiper-wrapper .swiper-slide a .txt_box p s
 /* 3행 : 전시 예약 시작 */
 main .reservation {
     margin:0 auto 0;
-    width:100%;
     height:auto;
     overflow: hidden;
     position: relative;
 
 }
-main .reservation #show_video{}
+main .reservation #show_video{
+    width: 100%;
+}
 main .reservation #show_txt_contents{
     position:absolute;
     bottom:240px;
-    padding-left: 207px;
-    
+    padding-left: 207px; 
 
 }
 main .reservation #show_txt_contents h1 {
@@ -138,8 +137,6 @@ main .reservation #show_txt_contents p {
     font-size: 18px;
     padding-left: 10px;
     margin-bottom: 10px;
-
-
 }
 
 main .reservation #show_txt_contents p span {
@@ -153,31 +150,46 @@ main .reservation #show_txt_contents .show_btn{
     width: 150px;
     margin-top: 50px;
     border-radius: 10px;
-    text-align: center;
-    margin-left: 10px;
-
-
+    display: flex;
+    justify-content: center;
 }
 
-main .reservation #show_txt_contents .show_btn  #reservation_btn {
-
+main .reservation #show_txt_contents .show_btn #reservation_btn {
+    width: 100%;
 }
-main .reservation #show_txt_contents .show_btn  #reservation_btn p {
+main .reservation #show_txt_contents .show_btn #reservation_btn p {
     font-size: 1rem;
     font-weight: 600;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 5px;
+    text-align: center;
     font-family: 'SUIT',sans-serif;
     letter-spacing: 10%;
     color: #000;
+    margin: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+/* 마우스 올렸을때 효과 - 3행 예약버튼 */
+main .reservation #show_txt_contents .show_btn:hover {
+    background-color: #000;
+}
+main .reservation #show_txt_contents .show_btn:hover #reservation_btn p {
+    color: #fff;
 }
 /* 3행 : 전시 예약 끝 */
 
 /* 4행 : 더 탬버린즈 퍼퓸 상품  시작 */
+
 /* 4행 : 더 탬버린즈 퍼퓸 상품 끝 */
 
 /* 5행 : 이벤트 배너  시작 */
+main .event #event_bnr{
+    background-color: rgb(255, 255, 157);
+    width: 100%;
+    height: 300px;
+}
+main .event #event_bnr h1{}
+main .event #event_bnr p{}
+main .event #event_bnr a {}
 /* 5행 : 이벤트 배너 끝 */
 
 /* 6행 : 기프트 이벤트 배너  시작 */

@@ -9,7 +9,6 @@ header {
     z-index: 1000; /* 영상 위에 올라오게 */
     background: transparent; 
     
-    /* padding: 0 96px; */
 }
 header #top_wrap /* 헤더 큰 묶음 */{ 
     /* background-color: rgb(255, 255, 172); 위치 확인용 색상 */
@@ -44,8 +43,11 @@ header  #line_ad_wrap .line_ad_contents a img {
 
 /* ========================================================= S: 로고 위치 시작 */
 header #top_wrap{padding-left: 96px; padding-right: 96px;}
+
 /* 호버했을때 효과 */
-header #top_wrap:hover {background-color:#fff;}
+header #top_wrap:hover {
+    background-color:#fff;
+}
 header #top_wrap .menu #gnb_wrap:hover .category li a { background-color:#fff; color:#000;}
 header #top_wrap h1 {
     /* background-color: brown;  */
@@ -55,6 +57,30 @@ header #top_wrap h1 {
 header #top_wrap h1 a {}
 header #top_wrap h1 a img {
     width: 220px; height: 25px;
+}
+header #top_wrap h1 a img:hover{    filter: invert(100%);
+}
+
+/* 카테고리 호버했을때 밑줄 효과 */
+header .category > li > a {
+    position: relative;
+    display: inline-block;
+}
+
+header .category > li > a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: all 0.3s ease;
+}
+
+header .category > li > a:hover::after {
+    width: 100%;
 }
 /* ============================================================== E: 로고 위치 끝 */
 
@@ -270,16 +296,18 @@ header #top_wrap .menu #user_menu .right_menu a .cart { width: 20px; height: 20p
 /* --------------------------- 푸터 css --------------------------*/
 footer {
     width: 100%;
-    height: 430px;
+    height: 390px;
     /* background-color: yellowgreen; */
     background-color: #000;
     padding-left: 217px;
     padding-right: 217px;
-    padding-top: 46px;
+    padding-top: 61.5px;
+    padding-bottom: 61.5px;
+
 }
 
 footer #footer_wrap{
-    border: 2px solid rebeccapurple;
+    /* border: 2px solid rebeccapurple; */
 }
 footer #footer_wrap .footer_top{
     display: flex;
@@ -349,6 +377,7 @@ footer #footer_wrap .footer_bottom {
     font-weight: 200;
     font-family: 'SUIT',sans-serif;
     display: flex;
+    justify-content: space-between;
 
 
 }
@@ -373,7 +402,8 @@ footer #footer_wrap .footer_bottom p a em{
 /* 푸터 sns */
 footer #footer_wrap .footer_bottom .sns_wrap{
     width: 100%;
-    margin-top: 60px;
+    text-align: right;
+    padding-top: 30px;
 }
 footer #footer_wrap .footer_bottom .sns_wrap a{
     /* padding-left:500px; */
