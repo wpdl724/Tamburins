@@ -1,3 +1,8 @@
+// index. js 
+// 1. 마우스 올렸을때 lnb 나타나는 효과 
+// 2. 띠배너 X표시 클릭시 없어지는 효과
+// 3. 헤더 -> 메뉴 카테고리에 마우스를 올렸을때 로고 이미지, 메뉴 카테고리 전체 글자 검정색으로 변경, 오른쪽메뉴 이미지들 모두 검정색을 변경하기 
+
 
 /* 마우스 올렸을때 lnb 나타나는 효과 */
 document.addEventListener("DOMContentLoaded", function () {
@@ -28,6 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* 띠배너 X표시 클릭시 없어지는 효과 */
+/* 헤더 광고 닫기 버튼 */
+const closeBtn = document.querySelector('.line_ad_contents a')
+const topAd = document.querySelector('#line_ad_wrap')
+console.log(closeBtn,topAd);
+
+closeBtn.addEventListener('click',()=>{
+    topAd.style.display ='none';
+})
+
+/* 헤더 - 배경색상 화이트로 변경되고 , 로고이미지 검정색으로 변경, 오른쪽 메뉴 이미지 검정색으로 변경 */
 
 
 /* 2행 _ 신제품 스와이퍼 */
@@ -36,3 +51,4 @@ var mySwiper = new Swiper('.swiper-container', {
     //옵션 문법
     //옵션:값, 옵션:값
 })
+

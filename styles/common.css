@@ -44,11 +44,13 @@ header  #line_ad_wrap .line_ad_contents a img {
 
 /* ========================================================= S: 로고 위치 시작 */
 header #top_wrap{padding-left: 96px; padding-right: 96px;}
+/* 호버했을때 효과 */
+header #top_wrap:hover {background-color:#fff;}
+header #top_wrap .menu #gnb_wrap:hover .category li a { background-color:#fff; color:#000;}
 header #top_wrap h1 {
     /* background-color: brown;  */
     width: 220px; padding-top: 20px;
     line-height: 20px;
-    
 }
 header #top_wrap h1 a {}
 header #top_wrap h1 a img {

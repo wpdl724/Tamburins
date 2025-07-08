@@ -29,7 +29,7 @@ main .first_video video {
 /* 2행 : 신제품  시작 */
 main .new_product{
     width: 100%;
-    height: 1000vh;
+    /* height: 1000vh; */
 }
 main .new_product h1{
     text-align: center;
