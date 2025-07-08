@@ -6,9 +6,10 @@
 ## 탬버린즈 사용 글꼴 
 * 'SUIT', sans-serif
 * 'Platypi', serif
+* font-family: "Playfair Display", serif;
 
 ## common.css 
 * header, footer css 디자인
 
 ## index.css 
-* main , section css 디자인
+* main , section css 디자인 

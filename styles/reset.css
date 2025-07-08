@@ -12,6 +12,7 @@ table,thead,tbody,tfoot,tr,td,th {
     font-family:'Platypi',serif;
 }
 p {font-family:'SUIT',sans-serif;}
+p em{font-family:'SUIT',sans-serif;}
 /* 개별 태그 초기값 */
 a {text-decoration:none;}
 ul,ol,li {list-style:none;}

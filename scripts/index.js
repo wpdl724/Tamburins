@@ -43,6 +43,18 @@ closeBtn.addEventListener('click',()=>{
 })
 
 /* 헤더 - 배경색상 화이트로 변경되고 , 로고이미지 검정색으로 변경, 오른쪽 메뉴 이미지 검정색으로 변경 */
+//헤더 변수
+//로고 이미지 변수
+//네비 카테고리 변수
+//오른쪽 메뉴 이미지 변수
+const headerLogo = document.querySelector('#top_wrap h1')
+const heaerNav = document.querySelector('#top_wrap .menu #gnb_wrap .category')
+const headerRight = document.querySelector('#top_wrap #user_menu .search ')
+
+headerLogo.addEventListener('mouseover',()=>{
+    headerLogo.style.src ='./images/icons/logo01.png'
+})
+console.log(headerLogo,heaerNav,headerRight);
 
 
 /* 2행 _ 신제품 스와이퍼 */
@@ -51,4 +63,3 @@ var mySwiper = new Swiper('.swiper-container', {
     //옵션 문법
     //옵션:값, 옵션:값
 })
-

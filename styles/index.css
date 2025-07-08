@@ -1,5 +1,4 @@
 body * {
-
 }
 
 
@@ -10,7 +9,7 @@ main{}
 main .first_video {
     display: block;
     width: 100%;
-    height: 930px;
+    height: 1000px;
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -26,65 +25,154 @@ main .first_video video {
 } 
 /* 1행 : 신제품 영상  끝 */
 
-/* 2행 : 신제품  시작 */
+/*  ================================= 2행 : 신제품  시작 */
 main .new_product{
     width: 100%;
-    /* height: 1000vh; */
+    background-color: skyblue;
+    padding-bottom: 228px;
 }
 main .new_product h1{
     text-align: center;
-    font-size: 2.813rem;
+    font-size: 2.4rem;
     font-weight: 600;
     padding-top: 85.5px;
 }
-main .new_product p{
+main .new_product > p{
     text-align: center;
     margin-top: 25px;
     font-size: 1.25rem;
     font-weight: 600;
-
+    padding-bottom: 60px;
 }
-main .new_product #new{
-    background-color: aqua;
-    width: 1500px;
+main .new_product .new_wrap{}
+main .new_product .new_wrap .swiper {}
+main .new_product .new_wrap .swiper .swiper-wrapper {
+    background-color: brown;
+    width:1494px;
+    margin: 0 auto;
+    padding-left: 20px;
 }
-main .new_product #new .swiper-wrapper{
+main .new_product .new_wrap .swiper .swiper-wrapper .swiper-slide{
     width: 337px;
-    height: 488px;
-    background-color: rebeccapurple;
-}
-main .new_product #new .swiper-wrapper .swiper-slide {}
-main .new_product #new .swiper-wrapper .swiper-slide .new_01{}
-main .new_product #new .swiper-wrapper .swiper-slide .new_01 img{}
-main .new_product #new .swiper-wrapper .swiper-slide .new_01 img #porduct{
+    margin-right: 50px;
     position: relative;
 }
-main .new_product #new .swiper-wrapper .swiper-slide .new_01 img #cart{}
-main .new_product #new .swiper-wrapper .swiper-slide .new_01 .txt_box{
-    background-color: yellow;
+main .new_product .new_wrap .swiper .swiper-wrapper .swiper-slide a{
+}
+main .new_product .new_wrap .swiper .swiper-wrapper .swiper-slide a #porduct{
+}
+main .new_product .new_wrap .swiper .swiper-wrapper .swiper-slide a #cart{
     position: absolute;
-    width: 310px;
+    top:20px; right: 50px;
 }
-main .new_product #new .swiper-wrapper .swiper-slide .new_01 h4{
-    font-family: 'SUIT-Regular';
+main .new_product .new_wrap .swiper .swiper-wrapper .swiper-slide a .txt_box{
+    background-color: #f5f5f5;
     text-align: center;
-    margin:20px;
-}
-main .new_product #new .swiper-wrapper .swiper-slide .new_01 p{
-    font-size: 0.75rem;
-    font-weight: 300;
-    font-family: 'SUIT-Regular';
-    color: #B9B9B9;
-}
-main .new_product #new .swiper-wrapper .swiper-slide .new_01 p span{ 
-    font-size: 0.75rem;
-    font-family: 'SUIT-Regular';
+    width: 310px;
+    height: 120px;
+    padding-top: 10px;
+    
 
 }
+main .new_product .new_wrap .swiper .swiper-wrapper .swiper-slide a .txt_box > p em{
+    font-size: 1rem;
+    font-family: 'SUIT',sans-serif;
+}
+main .new_product .new_wrap .swiper .swiper-wrapper .swiper-slide a .txt_box p {
+    font-family: 'SUIT',sans-serif;
+    font-size: 0.75rem;
+    font-weight: 200;
+    color: #B9B9B9;
+
+
+}
+main .new_product .new_wrap .swiper .swiper-wrapper .swiper-slide a .txt_box p:nth-child(3) {
+    color: red;
+    margin: 10px 0;
+}
+main .new_product .new_wrap .swiper .swiper-wrapper .swiper-slide a .txt_box p span{
+    font-family: 'SUIT',sans-serif;
+    font-size: 0.75rem;
+    font-weight: 200;
+    margin-top:     
+
+}
+/* 2행 : 스와이퍼 공통 선택자 */
+
 /* 2행 : 신제품 끝 */
 
-/* 3행 : 전시 예약  시작 */
-/* 3행 : 전시 예약
+/* 3행 : 전시 예약 시작 */
+main .reservation {
+    margin:0 auto 0;
+    width:100%;
+    height:auto;
+    overflow: hidden;
+    position: relative;
+
+}
+main .reservation #show_video{}
+main .reservation #show_txt_contents{
+    position:absolute;
+    bottom:240px;
+    padding-left: 207px;
+    
+
+}
+main .reservation #show_txt_contents h1 {
+    font-size: 6.25rem;
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: "Playfair Display", serif;
+    
+}
+main .reservation #show_txt_contents h1 span {
+    color: #fff;
+    font-family:'Platypi',serif;
+    font-weight: 200;
+
+}
+main .reservation #show_txt_contents p {
+    color: #fff;
+    line-height: 140%;
+    font-family:'Platypi',serif;
+    font-size: 18px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+
+
+}
+
+main .reservation #show_txt_contents p span {
+    font-size: 1.25rem;
+    color: #fff;
+    font-family: 'SUIT',sans-serif;
+}
+main .reservation #show_txt_contents .show_btn{
+    background-color: #fff;    
+    height: 35px;
+    width: 150px;
+    margin-top: 50px;
+    border-radius: 10px;
+    text-align: center;
+    margin-left: 10px;
+
+
+}
+
+main .reservation #show_txt_contents .show_btn  #reservation_btn {
+
+}
+main .reservation #show_txt_contents .show_btn  #reservation_btn p {
+    font-size: 1rem;
+    font-weight: 600;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    font-family: 'SUIT',sans-serif;
+    letter-spacing: 10%;
+    color: #000;
+}
+/* 3행 : 전시 예약 끝 */
 
 /* 4행 : 더 탬버린즈 퍼퓸 상품  시작 */
 /* 4행 : 더 탬버린즈 퍼퓸 상품 끝 */

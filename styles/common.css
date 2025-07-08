@@ -117,7 +117,7 @@ header #top_wrap .menu #gnb_wrap .category .lnb li a p{
 /* ------------------------------------------------------------------  */
 
 header #top_wrap .menu #gnb_wrap .category .lnb_bg { /* 네비 누르면 나오는 카테고리 이미지 (자식) */
-    display: block;
+    display: none;
     /* background-color: aqua; 위치확인 */
     background-color: #fff;
     position: absolute; 
@@ -268,3 +268,119 @@ header #top_wrap .menu #user_menu .right_menu a .cart { width: 20px; height: 20p
 }
 
 /* --------------------------- 푸터 css --------------------------*/
+footer {
+    width: 100%;
+    height: 430px;
+    /* background-color: yellowgreen; */
+    background-color: #000;
+    padding-left: 217px;
+    padding-right: 217px;
+    padding-top: 46px;
+}
+
+footer #footer_wrap{
+    border: 2px solid rebeccapurple;
+}
+footer #footer_wrap .footer_top{
+    display: flex;
+    flex-flow: row nowrap;
+    position: relative;
+    margin-bottom: 40px;
+}
+/* 푸터 - 매장안내 */
+footer #footer_wrap .footer_top .top_contents_1{
+    margin-right: 100px;
+}
+footer #footer_wrap .footer_top .top_contents_1 a{
+    
+}
+footer #footer_wrap .footer_top .top_contents_1 a p{
+    margin-bottom: 20px;
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: #fff;
+
+}
+footer #footer_wrap .footer_top .top_contents_1 a p em{
+    font-weight: 500;
+    font-size: 1rem;
+    color: #fff;
+}
+/* 푸터 - 고객서비스 */
+footer #footer_wrap .footer_top .top_contents_2{
+    margin-right: 100px;
+
+}
+footer #footer_wrap .footer_top .top_contents_2 a{}
+footer #footer_wrap .footer_top .top_contents_2 a p{
+    margin-bottom: 20px;
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: #fff;
+}
+footer #footer_wrap .footer_top .top_contents_2 a p em{
+    font-weight: 500;
+    font-size: 1rem;
+    color: #fff;
+
+}
+
+/* 푸터 - 법적고지 */
+footer #footer_wrap .footer_top .top_contents_3{}
+footer #footer_wrap .footer_top .top_contents_3 a{}
+footer #footer_wrap .footer_top .top_contents_3 a p{
+    margin-bottom: 20px;
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: #fff;
+
+}
+footer #footer_wrap .footer_top .top_contents_3 a p em{
+    font-weight: 500;
+    font-size: 1rem;
+    color: #fff;
+
+}
+
+/* 푸터 bottom */
+footer #footer_wrap .footer_bottom {
+    /* background-color: teal; */
+    font-size: 0.75rem; 
+    font-weight: 200;
+    font-family: 'SUIT',sans-serif;
+    display: flex;
+
+
+}
+footer #footer_wrap .footer_bottom address{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+footer #footer_wrap .footer_bottom p {
+    color: #fff;
+    line-height: 1.4;
+    font-size: 0.675rem;
+    font-weight: 100;
+}
+footer #footer_wrap .footer_bottom p a{}
+footer #footer_wrap .footer_bottom p a em{
+    text-decoration: underline;
+    color: #fff;
+}
+
+/* 푸터 sns */
+footer #footer_wrap .footer_bottom .sns_wrap{
+    width: 100%;
+    margin-top: 60px;
+}
+footer #footer_wrap .footer_bottom .sns_wrap a{
+    /* padding-left:500px; */
+}
+footer #footer_wrap .footer_bottom .sns_wrap a img{
+    margin-right: 12px;
+}
+footer #footer_wrap .footer_bottom .sns_wrap a #weibo {
+    padding:2px;
+}
