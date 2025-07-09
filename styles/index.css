@@ -25,7 +25,7 @@ main .first_video video {
 } 
 /* 1행 : 신제품 영상  끝 */
 
-/*  ================================= 2행 : 신제품  시작 */
+/*  ====================================================================== 2행 : 신제품  (스와이퍼) 시작 */
 main .new_product{
     width: 100%;
     background-color: skyblue;
@@ -98,7 +98,7 @@ main .new_product .new_wrap .swiper .swiper-wrapper .swiper-slide a .txt_box p s
 }
 /* 2행 : 스와이퍼 공통 선택자 */
 
-/* 2행 : 신제품 끝 */
+/*  ============================================================================= 2행 : 신제품 (스와이퍼) 끝 */
 
 /* 3행 : 전시 예약 시작 */
 main .reservation {
@@ -177,24 +177,77 @@ main .reservation #show_txt_contents .show_btn:hover #reservation_btn p {
 }
 /* 3행 : 전시 예약 끝 */
 
-/* 4행 : 더 탬버린즈 퍼퓸 상품 (탭구조 스와이퍼) 시작 */
+/* ========================================================================================================== 4행 : 더 탬버린즈 퍼퓸 상품 (탭구조 스와이퍼) 시작 */
 
-/* 4행 : 더 탬버린즈 퍼퓸 상품 (탭구조 스와이퍼) 끝 */
+/* ===========================================================================================================4행 : 더 탬버린즈 퍼퓸 상품 (탭구조 스와이퍼) 끝 */
 
-/* 5행 : 이벤트 배너  시작 */
+/* 5행 : 보타리 캔들 이벤트 배너  시작 */
 main .event #event_bnr{
-    background-color: rgb(255, 255, 157);
+    /* background-color: rgb(255, 255, 157); */
+    background-image: url(../images/bnr/bottari_candle_bnr.png);
     width: 100%;
     height: 300px;
     text-align: center;
+    padding-top: 77px;
+    padding-bottom: 77px;
+    margin: 0 auto;
 }
-main .event #event_bnr h1{}
-main .event #event_bnr p{}
-main .event #event_bnr a {}
-/* 5행 : 이벤트 배너 끝 */
+main .event #event_bnr h1{
+    font-size: 3.125rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+main .event #event_bnr p{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 22px;
+    color: #fff;
+}
+main .event #event_bnr p em{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+main .event #event_bnr a {
+    color: #fff;
+    font-size: 1rem;
+    font-size: 700;
+}
+main .event #event_bnr a em {
+    color: #fff;
+    font-size: 1rem;
+    font-size: 700;
+}
+main .event #event_bnr .underline-link {
+    position: relative;
+  display: inline-block;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+main .event #event_bnr .underline-link::after {
+    content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #fff;
+  transition: width 0.4s ease;
+}
+main .event #event_bnr .underline-link:hover::after {
+  width: 100%;
+}
+/* 5행 : 보타리 캔들 이벤트 배너 끝 */
 
 /* 6행 : 기프트 이벤트 배너  시작 */
 main .gift {
+    background-color: #F8FAFB;
     width: 100%;
     height: 600px;
     padding-top: 108px;
@@ -221,6 +274,8 @@ main .gift .gift_images .gift_item{
     overflow: hidden;
     border-radius: 20px;
     cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+
 }
 main .gift .gift_images .gift_item img{
     width: 378px; height: 290px;
@@ -235,7 +290,7 @@ main .gift .gift_images .gift_item .overlay{
     padding: 18px;
     display: none;
     opacity: 1;
-  transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -256,5 +311,8 @@ main .gift .gift_images .gift_item:hover .overlay{
 }
 /* 6행 : 기프트 이벤트 배너 신제품 끝 */
 
-/* 7행 : 인스타그램  시작 */
-/* 7행 : 인스타그램 끝 */
+/* ================================================================================== 7행 : 인스타그램  (스와이퍼) 시작 */
+/* ===================================================================================7행 : 인스타그램 (스와이퍼) 끝 */
+
+/* 8행 : 카피문구 광고 배너 시작 */
+/* 8행 : 카피문구 광고 배너 끝*/
