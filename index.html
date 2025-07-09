@@ -11,13 +11,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
-    <!-- 플러그인 필수 CSS cdn 연결 -->
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/respon.css">
     <link rel="stylesheet" href="./styles/index.css">
     <script src="./scripts/index.js" defer></script>
+    <!-- 플러그인 필수 CSS cdn 연결 -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- 플러그인 필수 JS cdn 연결 -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
@@ -119,7 +120,7 @@
             <div class="new_wrap">
                 <div class="swiper" id="new">
                     <!--필수-->
-                    <div class="swiper-wrapper">
+                    <div class="swiper-wrapper new1">
                         <div class="swiper-slide slide1">
                             <a href="#" >
                                 <img src="./images/new_fragrance/new_01.png" id = "porduct" alt="신제품_1">
@@ -228,33 +229,65 @@
                 </div>
             </div>
         </section><!-- E: 3행 전시 예약 -->
-        <section id="porduct_list"><!-- S: 4행 (탬버린즈 상품 lsit 스와이퍼) -->
-            <h1>THE TAMBURINS</h1>
-            <div class="list_wrap">
-                <ul class="list_contaniner">
-                    <li><a href="#" class="active">PERFUME</a>
-                        <div class="list_bg show">
-                            <ul class="list_item">
-                                <li>
-                                    <a href="#" class="info">
-                                        <img src="./images/list_perfume/list_01_camo.png" alt="퍼퓸 카모">
-                                        <p><em>퍼퓸 카모</em></p>
-                                        <p>진득한 카모마일 | 부드러운 나무결 | 머스크</p>
-                                        <p><span>₩ 149,000</span></p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="info">
-                                        <img src="./images/list_perfume/list_02_glow.png" alt="퍼퓸 이브닝 글로우">
-                                        <P><EM>퍼퓸 이브닝 글로우</EM></P>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                </ul>
+
+<!-- <전체부모>
+        <제목부모>
+            제목링크
+            제목링크
+        </제목부모>
+        <내용부모>
+            <제목1에 대한 내용부모>
+                <div class="swiper" id="hand_swiper">
+                    
+                    <div class="swiper-wrapper"> 필수
+                        <div class="swiper-slide slide1">내용</div>
+                        <div class="swiper-slide slide2">slide2</div>
+                        <div class="swiper-slide slide3">slide3</div>
+                    </div>
+                </div>
+                <스와이프 이전다음 버튼>
+                <스와이프 스크롤바>
+            </제목1에 대한 내용부모>
+            <제목2에 대한 내용부모>
+                <스와이프>
+                </스와이프>
+                <스와이프 이전다음 버튼>
+                <스와이프 스크롤바>
+            </제목2에 대한 내용부모>
+        </내용부모>
+</전체부모> -->
+
+<!-- 4행 :(탬버린즈 향수lsit 스와이퍼) 시작 -->
+        <section id="porduct_list"><!-- 전체부모 -->
+            <div class="perfume"><!-- 제목부모 -->
+                <h1>THE TAMBURINS</h1>
+                <a href="#"><p>PERFUME</p></a>
+                <a href="#"><p>HAND&LIP</p></a>
+                <a href="#"><p>BODY</p></a>
+                <a href="#"><p>HOME FRAGRANCE</p></a>
             </div>
-        </section><!-- E: 4행 (탬버린즈 향수lsit 스와이퍼)  -->
+            <div class="perfume_container"><!-- 내용부모 -->
+                <div class="swiper" id = "perfume_swiper">
+                    <!-- 필수 -->
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1">
+                            <a href="#">
+                                <img src="./images/list_perfume/list_01_camo.png" alt="퍼퓸카모">
+                                <p></p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide slide2">slide2</div>
+                        <div class="swiper-slide slide3">slide3</div>
+                        <div class="swiper-slide slide4">slide4</div>
+                    </div>
+                    <!-- 이전 다음 버튼 -->
+                    <div class="swiper-button-prev"><a href="#"><img src="./images/icons/left_arrow.png" alt="왼쪽 화살표버튼"></a></div>
+                    <div class="swiper-button-next"><a href="#"><img src="./images/icons/right_arrow.png" alt="오른쪽 화살표버튼"></a></div>
+                </div>
+            </div>
+        </section>
+<!-- 4행 : (탬버린즈 향수 list 스와이퍼) 끝 -->
+
         <section class="event"><!-- S: 5행 (보타리캔들 이벤트배너) -->
             <div id="event_bnr">
                 <h1>BOTTARI</h1>

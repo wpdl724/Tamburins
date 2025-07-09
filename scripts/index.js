@@ -58,18 +58,8 @@ closeBtn.addEventListener('click',()=>{
 
 
 /* 2행 _ 신제품 스와이퍼 */
-var mySwiper = new Swiper('.swiper-container', { 
-    //필요한 옵션을 작성합니다.
-    //옵션 문법
-    //옵션:값, 옵션:값
-})
 
-/* 헤더 이미지 변하게 하기 */
-// const header = document.querySelector('header');
-// const menu = document.querySelector('.category');
-// const logoImg = document.querySelector('main');
-// const userIcons = document.querySelectorAll('#user_menu img');
-// console.log(header,menu,logoImg,userIcons);
+var mySwiper = new Swiper('#new')
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -77,69 +67,73 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoImg = document.querySelector('#top_wrap h1 img');
     const rightIcons = document.querySelectorAll('#user_menu .right_menu img');
     const searchIcon = document.querySelector('#user_menu .search_btn img');
+    const searchInput = document.querySelector('#user_menu .search input'); 
     const gnbItems = document.querySelectorAll('.category > li > a');
 
     // 이미지 경로 설정
     const logoWhite = './images/logo_W.png';
     const logoBlack = './images/logo_B.png';
 
-    const icons = {
-    lang: {
-        white: './images/icons/lang_2W.png',
-        black: './images/icons/lang.png',
+const icons = {
+lang: {
+    white: './images/icons/lang_2W.png',
+    black: './images/icons/lang.png',
     },
     login: {
-        white: './images/icons/login_WW.png',
-        black: './images/icons/login_b.png',
+    white: './images/icons/login_WW.png',
+    black: './images/icons/login_b.png',
     },
     cart: {
-        white: './images/icons/cart_W.png',
-        black: './images/icons/cart_b.png',
+    white: './images/icons/cart_W.png',
+    black: './images/icons/cart_b.png',
     },
     search: {
-        white: './images/icons/white_s.png',
-        black: './images/icons/search_b.png',
+    white: './images/icons/white_s.png',
+    black: './images/icons/search_b.png',
     }
-    };
+};
 
-    // 마우스 오버 시 동작
-    function handleHoverIn() {
-      // 배경색 흰색
+function handleHoverIn() {
     header.style.backgroundColor = '#fff';
-
-      // 로고 검정으로
     logoImg.src = logoBlack;
-    
-      // 오른쪽 아이콘들 검정 이미지로 교체
+
     rightIcons.forEach(icon => {
-        const type = icon.classList[0];
-        if (icons[type]) icon.src = icons[type].black;
+    const type = icon.classList[0];
+    if (icons[type]) icon.src = icons[type].black;
     });
 
-      // 검색 아이콘 검정으로
     if (searchIcon) searchIcon.src = icons.search.black;
 
-      // 메뉴 텍스트 검정색으로
-    gnbItems.forEach(a => a.style.color = '#000');
+    // 밑줄 검정색으로
+    if (searchInput) {
+    searchInput.style.borderBottom = '1px solid black';
+    searchInput.style.color = '#000'; // 텍스트 색상도 검정
     }
 
-    // 마우스 아웃 시 원래대로
-    function handleHoverOut() {
+    gnbItems.forEach(a => a.style.color = '#000');
+}
+
+function handleHoverOut() {
     header.style.backgroundColor = 'transparent';
     logoImg.src = logoWhite;
 
     rightIcons.forEach(icon => {
-        const type = icon.classList[0];
-        if (icons[type]) icon.src = icons[type].white;
+    const type = icon.classList[0];
+    if (icons[type]) icon.src = icons[type].white;
     });
 
     if (searchIcon) searchIcon.src = icons.search.white;
 
-    gnbItems.forEach(a => a.style.color = '#fff');
+    // 밑줄 다시 흰색으로
+    if (searchInput) {
+    searchInput.style.borderBottom = '1px solid white';
+    searchInput.style.color = '#fff'; // 텍스트 색상도 흰색
     }
 
-    // 모든 카테고리 메뉴에 이벤트 등록
-    const menuArea = document.querySelector('#gnb_wrap');
-    menuArea.addEventListener('mouseenter', handleHoverIn);
-    menuArea.addEventListener('mouseleave', handleHoverOut);
+    gnbItems.forEach(a => a.style.color = '#fff');
+}
+
+const menuArea = document.querySelector('#gnb_wrap');
+menuArea.addEventListener('mouseenter', handleHoverIn);
+menuArea.addEventListener('mouseleave', handleHoverOut);
 });
