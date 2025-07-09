@@ -186,6 +186,7 @@ main .event #event_bnr{
     background-color: rgb(255, 255, 157);
     width: 100%;
     height: 300px;
+    text-align: center;
 }
 main .event #event_bnr h1{}
 main .event #event_bnr p{}

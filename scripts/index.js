@@ -47,14 +47,14 @@ closeBtn.addEventListener('click',()=>{
 //로고 이미지 변수
 //네비 카테고리 변수
 //오른쪽 메뉴 이미지 변수
-const headerLogo = document.querySelector('#top_wrap h1')
-const heaerNav = document.querySelector('#top_wrap .menu #gnb_wrap .category')
-const headerRight = document.querySelector('#top_wrap #user_menu .search ')
+// const headerLogo = document.querySelector('#top_wrap h1')
+// const heaerNav = document.querySelector('#top_wrap .menu #gnb_wrap .category')
+// const headerRight = document.querySelector('#top_wrap #user_menu .search ')
 
-headerLogo.addEventListener('mouseover',()=>{
-    headerLogo.style.src ='./images/icons/logo01.png'
-})
-console.log(headerLogo,heaerNav,headerRight);
+// headerLogo.addEventListener('mouseover',()=>{
+//     headerLogo.style.src ='./images/icons/logo01.png'
+// })
+// console.log(headerLogo,heaerNav,headerRight);
 
 
 /* 2행 _ 신제품 스와이퍼 */
@@ -63,3 +63,83 @@ var mySwiper = new Swiper('.swiper-container', {
     //옵션 문법
     //옵션:값, 옵션:값
 })
+
+/* 헤더 이미지 변하게 하기 */
+// const header = document.querySelector('header');
+// const menu = document.querySelector('.category');
+// const logoImg = document.querySelector('main');
+// const userIcons = document.querySelectorAll('#user_menu img');
+// console.log(header,menu,logoImg,userIcons);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('header');
+    const logoImg = document.querySelector('#top_wrap h1 img');
+    const rightIcons = document.querySelectorAll('#user_menu .right_menu img');
+    const searchIcon = document.querySelector('#user_menu .search_btn img');
+    const gnbItems = document.querySelectorAll('.category > li > a');
+
+    // 이미지 경로 설정
+    const logoWhite = './images/logo_W.png';
+    const logoBlack = './images/logo_B.png';
+
+    const icons = {
+    lang: {
+        white: './images/icons/lang_2W.png',
+        black: './images/icons/lang.png',
+    },
+    login: {
+        white: './images/icons/login_WW.png',
+        black: './images/icons/login_b.png',
+    },
+    cart: {
+        white: './images/icons/cart_W.png',
+        black: './images/icons/cart_b.png',
+    },
+    search: {
+        white: './images/icons/white_s.png',
+        black: './images/icons/search_b.png',
+    }
+    };
+
+    // 마우스 오버 시 동작
+    function handleHoverIn() {
+      // 배경색 흰색
+    header.style.backgroundColor = '#fff';
+
+      // 로고 검정으로
+    logoImg.src = logoBlack;
+    
+      // 오른쪽 아이콘들 검정 이미지로 교체
+    rightIcons.forEach(icon => {
+        const type = icon.classList[0];
+        if (icons[type]) icon.src = icons[type].black;
+    });
+
+      // 검색 아이콘 검정으로
+    if (searchIcon) searchIcon.src = icons.search.black;
+
+      // 메뉴 텍스트 검정색으로
+    gnbItems.forEach(a => a.style.color = '#000');
+    }
+
+    // 마우스 아웃 시 원래대로
+    function handleHoverOut() {
+    header.style.backgroundColor = 'transparent';
+    logoImg.src = logoWhite;
+
+    rightIcons.forEach(icon => {
+        const type = icon.classList[0];
+        if (icons[type]) icon.src = icons[type].white;
+    });
+
+    if (searchIcon) searchIcon.src = icons.search.white;
+
+    gnbItems.forEach(a => a.style.color = '#fff');
+    }
+
+    // 모든 카테고리 메뉴에 이벤트 등록
+    const menuArea = document.querySelector('#gnb_wrap');
+    menuArea.addEventListener('mouseenter', handleHoverIn);
+    menuArea.addEventListener('mouseleave', handleHoverOut);
+});

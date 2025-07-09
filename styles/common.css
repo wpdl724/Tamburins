@@ -45,9 +45,6 @@ header  #line_ad_wrap .line_ad_contents a img {
 header #top_wrap{padding-left: 96px; padding-right: 96px;}
 
 /* 호버했을때 효과 */
-header #top_wrap:hover {
-    background-color:#fff;
-}
 header #top_wrap .menu #gnb_wrap:hover .category li a { background-color:#fff; color:#000;}
 header #top_wrap h1 {
     /* background-color: brown;  */
@@ -57,8 +54,6 @@ header #top_wrap h1 {
 header #top_wrap h1 a {}
 header #top_wrap h1 a img {
     width: 220px; height: 25px;
-}
-header #top_wrap h1 a img:hover{    filter: invert(100%);
 }
 
 /* 카테고리 호버했을때 밑줄 효과 */
