@@ -2,6 +2,9 @@
 // 1. 마우스 올렸을때 lnb 나타나는 효과 
 // 2. 띠배너 X표시 클릭시 없어지는 효과
 // 3. 헤더 -> 메뉴 카테고리에 마우스를 올렸을때 로고 이미지, 메뉴 카테고리 전체 글자 검정색으로 변경, 오른쪽메뉴 이미지들 모두 검정색을 변경하기 
+// 4. 2행 신제품 스와이퍼 
+// 5. 4행 향수 리스트 스와이퍼 
+// 6. 7행 인스타그램 스와이퍼 
 
 
 /* 마우스 올렸을때 lnb 나타나는 효과 */
@@ -42,26 +45,7 @@ closeBtn.addEventListener('click',()=>{
     topAd.style.display ='none';
 })
 
-/* 헤더 - 배경색상 화이트로 변경되고 , 로고이미지 검정색으로 변경, 오른쪽 메뉴 이미지 검정색으로 변경 */
-//헤더 변수
-//로고 이미지 변수
-//네비 카테고리 변수
-//오른쪽 메뉴 이미지 변수
-// const headerLogo = document.querySelector('#top_wrap h1')
-// const heaerNav = document.querySelector('#top_wrap .menu #gnb_wrap .category')
-// const headerRight = document.querySelector('#top_wrap #user_menu .search ')
-
-// headerLogo.addEventListener('mouseover',()=>{
-//     headerLogo.style.src ='./images/icons/logo01.png'
-// })
-// console.log(headerLogo,heaerNav,headerRight);
-
-
-/* 2행 _ 신제품 스와이퍼 */
-
-var mySwiper = new Swiper('#new')
-
-
+/* 헤더 - 배경 화이트 , 검정색 로고 , 오른쪽 메뉴 검정색 */
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     const logoImg = document.querySelector('#top_wrap h1 img');
@@ -137,3 +121,76 @@ const menuArea = document.querySelector('#gnb_wrap');
 menuArea.addEventListener('mouseenter', handleHoverIn);
 menuArea.addEventListener('mouseleave', handleHoverOut);
 });
+
+
+/*  =============- 스와이퍼 js */
+/* 2행 (신제품)_ new 스와이퍼 */
+const newSwiper = new Swiper('#new', {
+    slidesPerView: 4,
+    spaceBetween: 10,
+    loop: false, // 무한루프 X
+    
+// breakpoints: {
+//     1024: {
+//     slidesPerView: 4,
+//     },
+//     768: {
+//     slidesPerView: 2,
+//     },
+//     480: {
+//     slidesPerView: 1,
+//     }
+//     }
+});
+
+// 좌우 화살표버튼 요소
+const prevBtn = document.querySelector('.new_wrap .swiper-button-prev');
+const nextBtn = document.querySelector('.new_wrap .swiper-button-next');
+
+// 버튼 동작 설정
+prevBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    newSwiper.slidePrev();
+});
+
+nextBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    newSwiper.slideNext();
+});
+
+  // 버튼 표시 상태 업데이트 함수
+function updateNavButtons() {
+if (newSwiper.isBeginning) {
+    prevBtn.style.display = 'none';
+    nextBtn.style.display = 'flex';
+} else if (newSwiper.isEnd) {
+    prevBtn.style.display = 'flex';
+    nextBtn.style.display = 'none';
+} else {
+    prevBtn.style.display = 'flex';
+    nextBtn.style.display = 'flex';
+}
+}
+
+// 초기 버튼 상태 설정
+updateNavButtons();
+
+  // 슬라이드 이동 시 상태 업데이트
+newSwiper.on('slideChange', updateNavButtons);
+/* -----------------------------------------------4행 (향수 리스트)_ lsit 스와이퍼  */
+var Swiper = new Swiper('.swiper-container', { 
+    //필요한 옵션을 작성합니다.
+    //옵션 문법
+    //옵션:값, 옵션:값
+})
+
+/*----------------------------------------------- 7행 (인스타)_ instagram 스와이퍼 */
+var mySwiper = new Swiper('.swiper-container', { 
+    //필요한 옵션을 작성합니다.
+    //옵션 문법
+    //옵션:값, 옵션:값
+})
+
+
+
+/* 2행 스크롤바  */

@@ -10,18 +10,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Platypi:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/common.css">
-    <link rel="stylesheet" href="./styles/respon.css">
-    <link rel="stylesheet" href="./styles/index.css">
-    <script src="./scripts/index.js" defer></script>
     <!-- 플러그인 필수 CSS cdn 연결 -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <!-- 플러그인 필수 JS cdn 연결 -->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/respon.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/index.js" defer></script>
 </head>
 <body>
     <!-- 헤더 시작 -->
@@ -120,10 +119,10 @@
             <div class="new_wrap">
                 <div class="swiper" id="new">
                     <!--필수-->
-                    <div class="swiper-wrapper new1">
+                    <div class="swiper-wrapper">
                         <div class="swiper-slide slide1">
-                            <a href="#" >
-                                <img src="./images/new_fragrance/new_01.png" id = "porduct" alt="신제품_1">
+                            <a href="#" class="product_item" >
+                                <img src="./images/new_fragrance/new_01.png" id = "product" alt="신제품_1">
                                 <img src="./images/icons/new_cart.png" id ="cart" alt="장바구니 아이콘">
                                 <div class="txt_box">
                                     <p><em>퍼퓸 보타리</em><p>
@@ -133,7 +132,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide slide2">
-                            <a href="#" >
+                            <a href="#" class="product_item" >
                                 <img src="./images/new_fragrance/new_02.png" id = "porduct" alt="신제품_2">
                                 <img src="./images/icons/new_cart.png" id ="cart" alt="장바구니 아이콘">
                                 <div class="txt_box">
@@ -144,7 +143,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide slide3">
-                            <a href="#" >
+                            <a href="#" class="product_item">
                                 <img src="./images/new_fragrance/new_03.png" id = "porduct" alt="신제품_3">
                                 <img src="./images/icons/new_cart.png" id ="cart" alt="장바구니 아이콘">
                                 <div class="txt_box">
@@ -155,7 +154,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide slide4">
-                            <a href="#" >
+                            <a href="#" class="product_item" >
                                 <img src="./images/new_fragrance/new_04.png" id = "porduct" alt="신제품_4">
                                 <img src="./images/icons/new_cart.png" id ="cart" alt="장바구니 아이콘">
                                 <div class="txt_box">
@@ -166,7 +165,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide slide5">
-                            <a href="#" >
+                            <a href="#" class="product_item" >
                                 <img src="./images/new_fragrance/new_04.png" id = "porduct" alt="신제품_4">
                                 <img src="./images/icons/new_cart.png" id ="cart" alt="장바구니 아이콘">
                                 <div class="txt_box">
@@ -177,7 +176,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide slide6">
-                            <a href="#" >
+                            <a href="#" class="product_item" >
                                 <img src="./images/new_fragrance/new_04.png" id = "porduct" alt="신제품_4">
                                 <img src="./images/icons/new_cart.png" id ="cart" alt="장바구니 아이콘">
                                 <div class="txt_box">
@@ -188,7 +187,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide slide7">
-                            <a href="#" >
+                            <a href="#" class="product_item">
                                 <img src="./images/new_fragrance/new_04.png" id = "porduct" alt="신제품_4">
                                 <img src="./images/icons/new_cart.png" id ="cart" alt="장바구니 아이콘">
                                 <div class="txt_box">
@@ -198,8 +197,8 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="swiper-slide slide4">
-                            <a href="#" >
+                        <div class="swiper-slide slide8">
+                            <a href="#" class="product_item">
                                 <img src="./images/new_fragrance/new_04.png" id = "porduct" alt="신제품_4">
                                 <img src="./images/icons/new_cart.png" id ="cart" alt="장바구니 아이콘">
                                 <div class="txt_box">
@@ -211,7 +210,6 @@
                         </div>
                     </div>
                     <!--필요 시 사용(선택)-->
-                    <div class="swiper-scrollbar"></div>
                 </div>
                 <div class="swiper-button-prev"><a href="#"><img src="./images/icons/left_arrow.png" alt="왼쪽 화살표버튼"></a></div>
                 <div class="swiper-button-next"><a href="#"><img src="./images/icons/right_arrow.png" alt="오른쪽 화살표버튼"></a></div>
@@ -292,7 +290,7 @@
             <div id="event_bnr">
                 <h1>BOTTARI</h1>
                 <P>탬버린즈 플래그십 스토어 <em>BOTTARI</em> 퍼퓸 캔들 한정 판매</P>
-                <a href="#" class="underline-link"><em>BOTTARI</em> 퍼퓸 캔들 자세히 보기</a>
+                <a href="#" class="underline-link"><em>BOTTARI</em> <span>퍼퓸 캔들 자세히 보기</span></a>
             </div>
         </section><!-- E: 5행 커튼 배너 1 (보타리캔들 이벤트배너)  -->
 
@@ -323,7 +321,22 @@
             </div>
         </section><!-- E: 6행 (기프트 혜택)  -->
 
-        <section><!-- S: 7행 (인스타그램 - 스와이퍼) --> 
+        <section class="instagram"><!-- S: 7행 (인스타그램 - 스와이퍼) --> 
+            <h1>INSTAGRAM</h1>
+            <p><span>@</span>tamburinsofficial</p>
+            <div class="insta_wrap">
+                <div class="swiper" id="insta">
+                    <!--필수-->
+                    <div class="swiper-wrapper insta1">
+                        <div class="swiper-slide slide1">
+                            <a href="#" >
+                                <img src="./images/insta/insta_01.png" alt="인스타그램사진 1">
+                                <img src="./images/insta/insta_02.png" alt="인스타그램사진 1">
+                                <img src="./images/insta/insta_03.png" alt="인스타그램사진 1">
+                                <img src="./images/insta/insta_04.png" alt="인스타그램사진 1">
+                                <img src="./images/insta/insta_05.png" alt="인스타그램사진 1">
+                            </a>
+                        </div>
         </section><!-- E: 7행 (인스타그램) -->
         
         <section class="brand_bnr"> <!-- S: 8행 :커튼 배너2 (브랜드 카피문구)-->
