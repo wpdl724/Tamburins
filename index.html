@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/respon.css">
     <link rel="stylesheet" href="./styles/index.css">
+    <script src="./scripts/common.js" defer></script>
     <script src="./scripts/index.js" defer></script>
 </head>
 <body>
@@ -209,8 +210,8 @@
                             </a>
                         </div>
                     </div>
-                    <!--필요 시 사용(선택)-->
                 </div>
+                <!--필요 시 사용(선택)-->
                 <div class="swiper-button-prev"><a href="#"><img src="./images/icons/left_arrow.png" alt="왼쪽 화살표버튼"></a></div>
                 <div class="swiper-button-next"><a href="#"><img src="./images/icons/right_arrow.png" alt="오른쪽 화살표버튼"></a></div>
             </div>
@@ -257,21 +258,53 @@
 
 <!-- 4행 :(탬버린즈 향수lsit 스와이퍼) 시작 -->
         <section id="porduct_list"><!-- 전체부모 -->
-            <div class="perfume"><!-- 제목부모 -->
+            <div class="menu_tab"><!-- 제목부모 -->
                 <h1>THE TAMBURINS</h1>
                 <a href="#"><p>PERFUME</p></a>
                 <a href="#"><p>HAND&LIP</p></a>
                 <a href="#"><p>BODY</p></a>
                 <a href="#"><p>HOME FRAGRANCE</p></a>
             </div>
-            <div class="perfume_container"><!-- 내용부모 -->
-                <div class="swiper" id = "perfume_swiper">
+            <div class="list_wrap"><!-- 내용부모 -->
+                <div class="swiper" id = "productlist_swiper">
                     <!-- 필수 -->
                     <div class="swiper-wrapper">
                         <div class="swiper-slide slide1">
-                            <a href="#">
-                                <img src="./images/list_perfume/list_01_camo.png" alt="퍼퓸카모">
-                                <p></p>
+                            <a href="#" class="product_list" >
+                                <img src="./images/list_perfume/list_01_camo.png" id = "porduct" alt="퍼퓸 리스트 이미지 1">
+                                <img src="./images/icons/new_cart.png" id ="cart" alt="장바구니 아이콘">
+                                <div class="txt_box">
+                                    <p><em>퍼퓸 카모</em><p>
+                                    <p>진득한 카모마일 | 부드러운 나무결 | 머스크</p>
+                                    <p><span>₩ 149,000 </span></p>
+                                </div>
+                            </a>
+                            <a href="#" class="product_list" >
+                                <img src="./images/list_perfume/list_02_glow.png" id = "porduct" alt="퍼퓸 리스트 이미지 2">
+                                <img src="./images/icons/new_cart.png" id ="cart" alt="장바구니 아이콘">
+                                <div class="txt_box">
+                                    <p><em>이브닝 글로우</em><p>
+                                    <p>진득한 카모마일 | 부드러운 나무결 | 머스크</p>
+                                    <p><span>₩ 149,000 </span></p>
+                                </div>
+                            </a>
+                            <a href="#" class="product_list" >
+                                <img src="./images/list_perfume/list_03_metar.png" id = "porduct" alt="퍼퓸 리스트 이미지 3">
+                                <img src="./images/icons/new_cart.png" id ="cart" alt="장바구니 아이콘">
+                                <div class="txt_box">
+                                    <p><em>홀리메탈</em><p>
+                                    <p>진득한 카모마일 | 부드러운 나무결 | 머스크</p>
+                                    <p><span>₩ 149,000 </span></p>
+                                </div>
+                            </a>
+                            <a href="#" class="product_list" >
+                                <img src="./images/list_perfume/list_04_lale.png" id = "porduct" alt="퍼퓸 리스트 이미지 4">
+                                <img src="./images/icons/new_cart.png" id ="cart" alt="장바구니 아이콘">
+                                <div class="txt_box">
+                                    <p><em>퍼퓸 라레</em><p>
+                                    <p>진득한 카모마일 | 부드러운 나무결 | 머스크</p>
+                                    <p><span>₩ 149,000 </span></p>
+                                </div>
                             </a>
                         </div>
                         <div class="swiper-slide slide2">slide2</div>
@@ -279,8 +312,8 @@
                         <div class="swiper-slide slide4">slide4</div>
                     </div>
                     <!-- 이전 다음 버튼 -->
-                    <div class="swiper-button-prev"><a href="#"><img src="./images/icons/left_arrow.png" alt="왼쪽 화살표버튼"></a></div>
-                    <div class="swiper-button-next"><a href="#"><img src="./images/icons/right_arrow.png" alt="오른쪽 화살표버튼"></a></div>
+                    <div class="swiper-button-prev"><a href="#"><img src="./images/icons/left_arrow.png" alt="이전보기"></a></div>
+                    <div class="swiper-button-next"><a href="#"><img src="./images/icons/right_arrow.png" alt="다음보기"></a></div>
                 </div>
             </div>
         </section>
@@ -296,7 +329,7 @@
 
         <section class="gift"><!-- S: 6행 (기프트 혜택) -->
             <h1>GIFT EVENT</h1>
-            <p>탬버린즈 제품 구매 혜택</p>
+            <p><em>탬버린즈 제품 구매 혜택</em></p>
             <div class="gift_images">
                 <div class="gift_item">
                     <img src="./images/gift/gift_01.jpg" alt="전제품 구매시 보타리퍼퓸 2ml증정">
@@ -324,19 +357,41 @@
         <section class="instagram"><!-- S: 7행 (인스타그램 - 스와이퍼) --> 
             <h1>INSTAGRAM</h1>
             <p><span>@</span>tamburinsofficial</p>
-            <div class="insta_wrap">
-                <div class="swiper" id="insta">
-                    <!--필수-->
-                    <div class="swiper-wrapper insta1">
-                        <div class="swiper-slide slide1">
-                            <a href="#" >
-                                <img src="./images/insta/insta_01.png" alt="인스타그램사진 1">
-                                <img src="./images/insta/insta_02.png" alt="인스타그램사진 1">
-                                <img src="./images/insta/insta_03.png" alt="인스타그램사진 1">
-                                <img src="./images/insta/insta_04.png" alt="인스타그램사진 1">
-                                <img src="./images/insta/insta_05.png" alt="인스타그램사진 1">
-                            </a>
-                        </div>
+            <div class="swiper" id="insta">
+                <!--필수-->
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                        <a href="#"><img src="./images/insta/insta_01.png" alt="인스타 1번째 이미지"></a>
+                    </div>
+                    <div class="swiper-slide slide2">
+                        <a href="#"><img src="./images/insta/insta_02.png" alt="인스타 2번째 이미지"></a>
+                    </div>
+                    <div class="swiper-slide slide3">
+                        <a href="#"><img src="./images/insta/insta_03.png" alt="인스타 3번째 이미지"></a>
+                    </div>
+                    <div class="swiper-slide slide4">
+                        <a href="#"><img src="./images/insta/insta_04.png" alt="인스타 4번째 이미지"></a>
+                    </div>
+                    <div class="swiper-slide slide5">
+                        <a href="#"><img src="./images/insta/insta_05.png" alt="인스타 5번째 이미지"></a>
+                    </div>
+                    <div class="swiper-slide slide6">
+                        <a href="#"><img src="./images/insta/insta_06.png" alt="인스타 6번째 이미지"></a>
+                    </div>
+                    <div class="swiper-slide slide7">
+                        <a href="#"><img src="./images/insta/insta_07.png" alt="인스타 7번째 이미지"></a>
+                    </div>
+                    <div class="swiper-slide slide8">
+                        <a href="#"><img src="./images/insta/insta_08.png" alt="인스타 8번째 이미지"></a>
+                    </div>
+                    <div class="swiper-slide slide9">
+                        <a href="#"><img src="./images/insta/insta_09.png" alt="인스타 9번째 이미지"></a>
+                    </div>
+                    <div class="swiper-slide slide10">
+                        <a href="#"><img src="./images/insta/insta_10.png" alt="인스타 10번째 이미지"></a>
+                    </div>
+                </div>
+            </div>
         </section><!-- E: 7행 (인스타그램) -->
         
         <section class="brand_bnr"> <!-- S: 8행 :커튼 배너2 (브랜드 카피문구)-->

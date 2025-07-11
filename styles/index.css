@@ -1,3 +1,4 @@
+/* index.css */
 body * {
 }
 
@@ -209,6 +210,7 @@ main .reservation #show_txt_contents .show_btn:hover #reservation_btn p {
 
 /* ================================ 4행 : 더 탬버린즈 퍼퓸 상품 (탭구조 스와이퍼) 시작 */
 
+
 /* =================================4행 : 더 탬버린즈 퍼퓸 상품 (탭구조 스와이퍼) 끝 */
 
 /* 5행 : 보타리 캔들 이벤트 배너  시작 */
@@ -288,10 +290,16 @@ main .gift h1{
     font-weight: 500;
     margin-bottom: 10px;
 }
-main .gift p{
+main .gift p em {
     text-align: center;
     font-size: 0.875rem;
     font-weight: 400;
+    line-height: 150%;
+}
+main .gift p{
+    text-align: center;
+    font-size: 0.875rem;
+    font-weight: 300;
     line-height: 150%;
 }
 main .gift .gift_images{
@@ -310,7 +318,7 @@ main .gift .gift_images .gift_item{
 main .gift .gift_images .gift_item img{
     width: 378px; height: 290px;
     border-radius: 20px;
-    transition: opacity 0.3s ease;
+    /* transition: opacity 0.3s ease; */
 }
 main .gift .gift_images .gift_item .overlay{
     width: 100%;
@@ -320,7 +328,7 @@ main .gift .gift_images .gift_item .overlay{
     padding: 18px;
     display: none;
     opacity: 1;
-    transition: all 0.4s ease-in-out;
+    /* transition: all 0.4s ease-in-out; */
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
 }
@@ -331,7 +339,7 @@ main .gift .gift_images .gift_item .overlay p{
 }
 /* (6행 기프트 이벤트) 마우스 호버했을때 나타나는 효과 */
 main .gift_item:hover img {
-    transform: scale(1.03);
+    /* transform: scale(1.03); */
     opacity: 1;
     border-radius: 20px;
 }
@@ -343,14 +351,17 @@ main .gift .gift_images .gift_item:hover .overlay{
 
 /* =========================== 7행 : 인스타그램  (스와이퍼) 시작 */
 main .instagram {
-    background-color: rgb(156, 156, 202);
+    /* background-color: rgb(156, 156, 202); */
     width: 100%; height: 600px;
     text-align: center;
     padding-top: 60px;
+    position: relative;
+    
 }
 main .instagram h1{
     font-size: 1.875rem;
     font-weight: 500;
+    margin-bottom: 5px;
 }
 main .instagram p span {
     font-family: "Akshar", sans-serif;
@@ -359,9 +370,46 @@ main .instagram p span {
 }
 main .instagram p{
     font-size: 0.875rem;
+    margin-bottom: 60px;
 }
-main .instagram .insta_wrap{}
-main .instagram .insta_wrap #insta{}
+main .instagram .swiper{
+    /* background-color: yellow; */
+    width: 1540px;
+    
+
+}
+main .instagram .swiper .swiper-wrapper{
+
+}
+main .instagram .swiper .swiper-wrapper .swiper-slide {
+    width: 337px;
+    
+}
+main .instagram .swiper .swiper-wrapper .swiper-slide a{
+
+}
+main .instagram .swiper .swiper-wrapper .swiper-slide a img{
+}
+/* 7행 슬라이드 버튼  */
+.swiper-button-prev:after {display: none;}
+.swiper-button-next:after {display: none;}
+
+main .instagram .swiper .swiper-wrapper .swiper-slide .swiper-button-prev{
+}
+
+main .instagram .swiper .swiper-wrapper .swiper-slide .swiper-button-prev a {
+    position: absolute;
+    right:-100px;
+    top:-50px;
+    z-index: 99;
+}
+main .instagram .swiper .swiper-wrapper .swiper-slide .swiper-button-next {}
+main .instagram .swiper .swiper-wrapper .swiper-slide .swiper-button-next a {
+    position: absolute;
+    left:-150px;
+    top:-50px;
+    z-index: 99;
+}
 
 /* ============================7행 : 인스타그램 (스와이퍼) 끝 */
 
