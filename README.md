@@ -13,6 +13,6 @@
 
 ## index.css 
 * main , section css 디자인 
-
+## 글꼴 공통 선택자 
 * 글꼴 공통선택자 만들기 
 * html위 에 글꼴 링크 항상 넣기 
