@@ -55,11 +55,10 @@ newSwiper.on('slideChange', updateNavButtons);
 
 
 /* -----------------------------------------------4행 (향수 리스트)_ lsit 스와이퍼 시작 */
-var mySwiper = new Swiper('', { 
-    //필요한 옵션을 작성합니다.
-    //옵션 문법
-    //옵션:값, 옵션:값
-})
+// var listSwiper = new Swiper('#productlist_swiper', { 
+//     slidesPerView:4,
+//     loop:true,
+// })
 
 
 
