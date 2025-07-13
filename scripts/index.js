@@ -55,10 +55,10 @@ newSwiper.on('slideChange', updateNavButtons);
 
 
 /* -----------------------------------------------4행 (향수 리스트)_ lsit 스와이퍼 시작 */
-// var listSwiper = new Swiper('#productlist_swiper', { 
-//     slidesPerView:4,
-//     loop:true,
-// })
+var listSwiper = new Swiper('#productlist_swiper', { 
+    slidesPerView:4,
+    loop:true,
+})
 
 
 

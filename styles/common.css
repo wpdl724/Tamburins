@@ -165,6 +165,7 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li {
 }
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a img {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a img:hover {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a img #perfume_01 {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a p {}
 /* ======================================================= 1. lnb lnb_perfume (퍼퓸 카테고리 끝) */

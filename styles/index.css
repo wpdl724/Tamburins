@@ -72,7 +72,6 @@ main .new_wrap .swiper .swiper-wrapper .swiper-slide{
 main .new_wrap .swiper .swiper-wrapper .slide1{
 }
 main .new_wrap .swiper .swiper-wrapper .swiper-slide .product_item {
-    
 }
 main .new_wrap .swiper .swiper-wrapper .swiper-slide .product_item img{
 
@@ -90,6 +89,8 @@ main .new_wrap .swiper .swiper-wrapper .swiper-slide .txt_box{
     background-color: #fff;
     width: 310px; height: 120px;
     padding: 30px 0;
+    font-family: 'SUIT',sans-serif;
+
 
 }
 main .new_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p em{
@@ -102,8 +103,9 @@ main .new_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p{
     font-size: 0.7rem;
     color: #B9B9B9;
     margin-bottom: 10px;
-            font-family: 'SUIT',sans-serif;
+    font-family: 'SUIT',sans-serif;
 
+    
 
 }
 main .new_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p span{
@@ -229,7 +231,6 @@ main #porduct_list {/* 전체 부모 */
 }
 main #porduct_list .menu_tab{ /* 제목 부모 */
     background-color: rgb(241, 241, 119);
-    width: 100%;
     text-align: center;
     margin: 0 auto;
     padding: 60px 0;
@@ -260,7 +261,13 @@ main .list_wrap{ /* 내용부모 */
     margin: 0 auto;
     
 }
-main .list_wrap .swiper {}
+main .list_wrap .swiper {
+        /* position: relative; */
+
+    /* background-color: palevioletred; */
+    /* width: 1688px; */
+    /* width: 100%; */
+}
 main .list_wrap .swiper .swiper-wrapper {}
 main .list_wrap .swiper .swiper-wrapper .swiper-slide {
     display: flex;
@@ -272,7 +279,7 @@ main .list_wrap .swiper .swiper-wrapper .swiper-slide .product_list {
 /* 이미지 위에 장바구니  */
 main .list_wrap .swiper .swiper-wrapper .swiper-slide .product_list #product{
 }
-main .list_wrap .swiper .swiper-wrapper .swiper-slide .product_list #cart  {
+main .list_wrap .swiper .swiper-wrapper .swiper-slide .product_list #cart{
     position: absolute;
     top: 25px; left: 260px;
 }
@@ -287,16 +294,10 @@ main .list_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p{
     font-size: 0.7rem;
     color: #B9B9B9;
     margin-bottom: 10px;
-    font-family: 'SUIT',sans-serif;
-
 }
-main .list_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p em{
-    font-size: 0.875rem; 
-    font-family: 'SUIT',sans-serif;
+main .list_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p em{font-size: 0.875rem;
 }
-main .list_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p span{
-    font-size: 0.75rem;
-    font-family: 'SUIT',sans-serif;
+main .list_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p span{font-size: 0.75rem;
 }
 /* 4행 슬라이드 버튼  */
 .swiper-button-prev:after {display: none;}
@@ -322,7 +323,6 @@ main .new_product .list_wrap .swiper-button-next a {
 
 /* 5행 : 보타리 캔들 이벤트 배너  시작 */
 main .event #event_bnr{
-    color: #fff;
     /* background-color: rgb(255, 255, 157); */
     background-image: url(../images/bnr/bottari_candle_bnr.png);
     width: 100%;
@@ -352,22 +352,13 @@ main .event #event_bnr a {
     color: #fff;
     font-size: 1rem;
     font-size: 700;
-    border-bottom: 1px solid #fff;
 }
 main .event #event_bnr a em {
     color: #fff;
     font-size: 1rem;
     font-size: 700;
 }
-main .event #event_bnr a span{
-    color:#fff;
-    font-size: 1rem;
-    font-size: 700;
-    font-family: 'SUIT',sans-serif;
-   
-
-}
-/* main .event #event_bnr .underline-link {
+main .event #event_bnr .underline-link {
     position: relative;
     display: inline-block;
     color: #fff;
@@ -391,7 +382,7 @@ main .event #event_bnr .underline-link::after {
 }
 main .event #event_bnr .underline-link:hover::after {
     width: 100%;
-} */
+}
 /* 5행 : 보타리 캔들 이벤트 배너 끝 */
 
 /* 6행 : 기프트 이벤트 배너  시작 */
