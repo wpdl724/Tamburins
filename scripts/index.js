@@ -61,8 +61,16 @@ var listSwiper = new Swiper('#productlist_swiper', {
     loop:true,
 })
 
-if
+const tab = document.querySelectorAll('.menu_tab a');
+const listswiper = document.querySelectorAll('.swiper_wrapper');
 
+console.log(tab,listswiper);
+
+tab.forEach ((tab, index)=>{
+    tab.addEventListener('click', (e) => {
+        e.preventDefault();
+    })
+})
 
 
 
@@ -93,3 +101,7 @@ const autoSwiper = new Swiper('#insta', {
     prevEl: '.instagram .swiper-button-prev',
     },
 });
+
+
+
+
