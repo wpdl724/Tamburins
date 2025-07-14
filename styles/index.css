@@ -216,7 +216,7 @@ main .reservation #show_txt_contents .show_btn:hover #reservation_btn p {
 }
 /* 3행 : 전시 예약 끝 */
 
-/* ================================ 4행 : 더 탬버린즈 퍼퓸 상품 (탭구조 스와이퍼) 시작 */
+/* ================================================================= 4행 : 더 탬버린즈 퍼퓸 상품 (탭구조 스와이퍼) 시작 */
 main #product_list {/* 전체 부모 */
     background-color: skyblue;
     width: 100%;
@@ -261,12 +261,14 @@ main .list_wrap{ /* 내용부모 */
     margin: 0 auto;
     
 }
-main .list_wrap .swiper {
-        /* position: relative; */
+/* 기본적으로 모든 스와이퍼 숨기기 */
 
-    /* background-color: palevioletred; */
-    /* width: 1688px; */
-    /* width: 100%; */
+main .list_wrap .swiper {
+    display: none;
+}
+/* 활성화된 스와이퍼만 보이게 설정 */
+main .list_wrap .swiper.active{
+    display: block;
 }
 main .list_wrap .swiper .swiper-wrapper {}
 main .list_wrap .swiper .swiper-wrapper .swiper-slide {
@@ -302,13 +304,16 @@ main .list_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p span{font-size:
 /* 4행 슬라이드 버튼  */
 .swiper-button-prev:after {display: none;}
 .swiper-button-next:after {display: none;}
-main .new_product .new_wrap .swiper-button-prev{}
+main .new_product .new_wrap .swiper-button-prev{
+    /* background-color: rebeccapurple; */
+}
 
 main .new_product .list_wrap .swiper-button-prev a {
     position: absolute;
-    right:-100px;
-    top:-50px;
-    z-index: 99;
+    background-color: rebeccapurple;
+    /* right:-100px; */
+    /* top:-50px; */
+    /* z-index: 99; */
     /* background-color: yellowgreen; */
 }
 main .new_product .list_wrap .swiper-button-next {}

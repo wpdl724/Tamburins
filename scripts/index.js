@@ -60,23 +60,53 @@ var listSwiper = new Swiper('#productlist_swiper', {
     spaceBetween: 10,
     loop:true,
 })
+const tabs = document.querySelectorAll(".menu_tab a");
+  const swipers = document.querySelectorAll(".list_wrap .swiper");
 
-const tab = document.querySelectorAll('.menu_tab a');
-const listswiper = document.querySelectorAll('.swiper_wrapper');
+  // 각 swiper를 인덱스별로 저장
+  const swiperInstances = [];
 
-console.log(tab,listswiper);
+  function initSwiper(index) {
+    if (!swiperInstances[index]) {
+      swiperInstances[index] = new Swiper(swipers[index], {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+    }
+  }
 
-tab.forEach ((tab, index)=>{
-    tab.addEventListener('click', (e) => {
-        e.preventDefault();
-    })
-})
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      // 모든 swiper 숨김
+      swipers.forEach((swiper) => swiper.classList.remove("active"));
+      // 현재 탭의 swiper만 보이게
+      swipers[index].classList.add("active");
+
+      // 탭 강조 표시
+      tabs.forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      // 해당 swiper 인스턴스 초기화
+      initSwiper(index);
+    });
+  });
+
+  // 초기화
+  window.addEventListener("DOMContentLoaded", () => {
+    swipers[0].classList.add("active");
+    tabs[0].classList.add("active");
+    initSwiper(0); // 첫 번째 swiper 활성화
+  });
 
 
-
-
-
-
+  
 /*----------------------------------------------- 7행 (인스타)_ instagram 스와이퍼 */
 var instaSwiper = new Swiper('#insta', { 
     slidesPerView:5,
