@@ -64,7 +64,7 @@ lang: {
     },
     cart: {
     white: './images/icons/cart_W.png',
-    black: './images/icons/cart_b.png',
+    black: './images/icons/cart_Black.png',
     },
     search: {
     white: './images/icons/white_s.png',

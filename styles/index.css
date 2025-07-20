@@ -74,6 +74,7 @@ main .new_wrap .swiper .swiper-wrapper .slide1{
 main .new_wrap .swiper .swiper-wrapper .swiper-slide .product_item {
 }
 main .new_wrap .swiper .swiper-wrapper .swiper-slide .product_item img{
+    display: block;
 
 }
 
@@ -86,12 +87,12 @@ main .new_wrap .swiper .swiper-wrapper .swiper-slide .product_item #cart{
 }
 main .new_wrap .swiper .swiper-wrapper .swiper-slide a:hover #cart {}
 main .new_wrap .swiper .swiper-wrapper .swiper-slide .txt_box{
-    background-color: #fff;
+    background-color: #F5F5F5;
     width: 310px; height: 120px;
     padding: 30px 0;
     font-family: 'SUIT',sans-serif;
-
-
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 main .new_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p em{
     font-size: 0.875rem;
@@ -104,9 +105,6 @@ main .new_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p{
     color: #B9B9B9;
     margin-bottom: 10px;
     font-family: 'SUIT',sans-serif;
-
-    
-
 }
 main .new_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p span{
     font-size: 0.75rem;
@@ -218,19 +216,19 @@ main .reservation #show_txt_contents .show_btn:hover #reservation_btn p {
 
 /* ================================================================= 4행 : 더 탬버린즈 퍼퓸 상품 (탭구조 스와이퍼) 시작 */
 main #product_list {/* 전체 부모 */
-    background-color: skyblue;
-    width: 100%;
-    height: 1000px;
+    /* background-color: skyblue; */
+    width: 100%; height: 900px;
+    /* height: 920px; */
     display: flex; 
     flex-flow: column;
     position: relative;
 
-    /* padding: 80px; */
+    padding: 80px;
 
 }
 /* 탭 구조  */
 main #product_list .menu_tab{ /* 제목 부모 */
-    background-color: rgb(241, 241, 119);
+    /* background-color: rgb(241, 241, 119); */
     text-align: center;
     margin: 0 auto;
     padding: 60px 0;
@@ -252,76 +250,87 @@ main #product_list .menu_tab a{
     
 }
 main #product_list .menu_tab a p{
-    background-color: rebeccapurple;
+    /* background-color: rebeccapurple; */
 }
-
-main .list_wrap{ /* 내용부모 */
+main #product_list .menu_tab a p:hover {
+    border-bottom: 1px solid #000;
+}
+main #product_list .list_wrap{ /* 내용부모 */
     background-color: yellowgreen;
-    width: 1685px;
+    width: 1500px;
     margin: 0 auto;
     
 }
 /* 기본적으로 모든 스와이퍼 숨기기 */
 
-main .list_wrap .swiper {
+main #product_list .list_wrap .swiper {
     display: none;
 }
 /* 활성화된 스와이퍼만 보이게 설정 */
-main .list_wrap .swiper.active{
+main #product_list .list_wrap .swiper.active{
     display: block;
 }
-main .list_wrap .swiper .swiper-wrapper {}
-main .list_wrap .swiper .swiper-wrapper .swiper-slide {
-    display: flex;
+main #product_list .list_wrap .swiper .swiper-wrapper {}
+main #product_list .list_wrap .swiper .swiper-wrapper .swiper-slide {
     
 }
-main .list_wrap .swiper .swiper-wrapper .swiper-slide .product_list {
+main #product_list .list_wrap .swiper .swiper-wrapper .swiper-slide .product_list {
 
 }
-/* 이미지 위에 장바구니  */
-main .list_wrap .swiper .swiper-wrapper .swiper-slide .product_list #product{
+main #product_list .list_wrap .swiper .swiper-wrapper .swiper-slide .product_list img{
+    
 }
-main .list_wrap .swiper .swiper-wrapper .swiper-slide .product_list #cart{
+/* 이미지 위에 장바구니  */
+main #product_list .list_wrap .swiper .swiper-wrapper .swiper-slide .product_list #product{
+}
+main #product_list .list_wrap .swiper .swiper-wrapper .swiper-slide .product_list #cart{
     position: absolute;
     top: 25px; left: 260px;
 }
 /* 내용 */
 main .list_wrap .swiper .swiper-wrapper .swiper-slide .txt_box{
-    background-color: #fff;
+    background-color: #F5F5F5;
     width: 310px; height: 120px;
     padding: 30px 0;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
-main .list_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p{
+main #product_list .list_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p{
     text-align: center;
     font-size: 0.7rem;
     color: #B9B9B9;
     margin-bottom: 10px;
 }
-main .list_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p em{font-size: 0.875rem;
+main #product_list .list_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p em{
+    font-size: 0.875rem;
+font-family: 'SUIT',sans-serif;
 }
-main .list_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p span{font-size: 0.75rem;
+main #product_list .list_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p span{
+    font-size: 0.75rem;
+    font-family: 'SUIT',sans-serif;
 }
 /* 4행 슬라이드 버튼  */
 .swiper-button-prev:after {display: none;}
 .swiper-button-next:after {display: none;}
-main .new_product .new_wrap .swiper-button-prev{
-    /* background-color: rebeccapurple; */
+main #product_list .swiper-button-prev{
 }
 
-main .new_product .list_wrap .swiper-button-prev a {
-    position: absolute;
-    background-color: rebeccapurple;
+main #product_list .list_wrap .swiper-button-prev{
+    /* position: absolute; */
+    
     /* right:-100px; */
     /* top:-50px; */
     /* z-index: 99; */
     /* background-color: yellowgreen; */
 }
-main .new_product .list_wrap .swiper-button-next {}
-main .new_product .list_wrap .swiper-button-next a {
-    position: absolute;
-    left:-150px;
+main #product_list .list_wrap .swiper-button-next {
+}
+main #product_list .list_wrap .swiper-button-next a {
+    /* position: absolute; */
+    /* left:-150px;
     top:-50px;
-    z-index: 99;
+    z-index: 99; */
+    
 }
 
 /* =================================4행 : 더 탬버린즈 퍼퓸 상품 (탭구조 스와이퍼) 끝 */
@@ -358,22 +367,28 @@ main .event #event_bnr a {
     font-size: 1rem;
     font-size: 700;
 }
-main .event #event_bnr a em {
+main .event #event_bnr a em { /* 한정판매 문구 */
     color: #fff;
     font-size: 1rem;
     font-size: 700;
 }
 main .event #event_bnr .underline-link {
-    position: relative;
+    position: relative; 
     display: inline-block;
     color: #fff;
     font-size: 1rem;
     font-weight: 400;
     font-family: 'Playfair Display', serif;
     letter-spacing: 0.5px;
-    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    /* text-decoration: none;
     padding-bottom: 5px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; */
+}
+main .event #event_bnr .underline-link span{
+    color: #fff;
+    font-family: 'SUIT', sans-serif;
+    
 }
 main .event #event_bnr .underline-link::after {
     content: "";
@@ -382,8 +397,8 @@ main .event #event_bnr .underline-link::after {
     bottom: 0;
     width: 0%;
     height: 1px;
-    background-color: #fff;
-    transition: width 0.4s ease;
+    /* background-color: #fff;
+    transition: width 0.4s ease; */
 }
 main .event #event_bnr .underline-link:hover::after {
     width: 100%;
@@ -529,7 +544,7 @@ main .instagram .swiper .swiper-wrapper .swiper-slide .swiper-button-next a {
 /* 8행 : 카피문구 광고 배너 시작 */
     main .brand_bnr {
         /* background-color: yellow; */
-        background-image: url(../images/bnr/bnr01_t.jpg);
+        background-image: url(../images/bnr/brand_bnr_01.png);
         width: 100%; height: 180px;
         margin: 0 auto;
         padding-top: 38px;

@@ -6,6 +6,8 @@
 // 5. 4행 향수 리스트 스와이퍼 
 // 6. 7행 인스타그램 스와이퍼 
 
+//a태그 누르면 되돌아가기 막기
+
 /*  =============- 스와이퍼 js */
 /* ============================================ 2행 (신제품)_ new 스와이퍼 */
 const newSwiper = new Swiper('#new', {
@@ -93,7 +95,7 @@ const tabs = document.querySelectorAll(".menu_tab a");
       tabs.forEach((t) => t.classList.remove("active"));
       tab.classList.add("active");
 
-      // 해당 swiper 인스턴스 초기화
+      // 해당 swiper 초기화
       initSwiper(index);
     });
   });
@@ -105,7 +107,16 @@ const tabs = document.querySelectorAll(".menu_tab a");
     initSwiper(0); // 첫 번째 swiper 활성화
   });
 
+/* 4행 클릭 밑줄 */
+  const tabs1 = document.querySelectorAll('.menu_tab .tab');
 
+  tabs1.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs1.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      // 추가로 원하는 슬라이드 제어 코드 삽입 가능
+    });
+  });
   
 /*----------------------------------------------- 7행 (인스타)_ instagram 스와이퍼 */
 var instaSwiper = new Swiper('#insta', { 
