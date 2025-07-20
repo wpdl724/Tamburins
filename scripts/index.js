@@ -108,7 +108,7 @@ const tabs = document.querySelectorAll(".menu_tab a");
   });
 
 /* 4행 클릭 밑줄 */
-  const tabs1 = document.querySelectorAll('.menu_tab .tab');
+  const tabs1 = document.querySelectorAll('.menu_tab');
 
   tabs1.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -118,6 +118,8 @@ const tabs = document.querySelectorAll(".menu_tab a");
     });
   });
   
+
+
 /*----------------------------------------------- 7행 (인스타)_ instagram 스와이퍼 */
 var instaSwiper = new Swiper('#insta', { 
     slidesPerView:5,
