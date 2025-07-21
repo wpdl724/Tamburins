@@ -470,6 +470,7 @@ main .gift_item:hover img {
     /* transform: scale(1.03); */
     opacity: 1;
     border-radius: 20px;
+    cursor: default;
 }
 main .gift .gift_images .gift_item:hover .overlay{
     opacity: 1;
