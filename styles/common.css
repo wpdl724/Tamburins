@@ -47,7 +47,11 @@ header  #line_ad_wrap .line_ad_contents a img {
 /*  ========================================================== E: 띠배너 끝 */
 
 /* ========================================================= S: 로고 위치 시작 */
-header #top_wrap{padding-left: 96px; padding-right: 96px;}
+header #top_wrap{
+    padding-left: 96px; padding-right: 96px;
+    /* background-color: #663399; */
+    padding-bottom: 10px;
+}
 
 /* 호버했을때 효과 */
 header #top_wrap .menu #gnb_wrap:hover .category li a { background-color:#fff; color:#000;}
@@ -148,7 +152,7 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg { /* 네비 누르면 나오�
     background-color: #fff;
     position: absolute; 
     width: 100%;
-    left:0; top:50px;
+    left:0; top:60px;
     transition: all 0.3s ease;
     z-index: 1000;
     padding-left: 96px;
@@ -163,7 +167,7 @@ header #top_wrap .menu #gnb_wrap .category > li:hover .lnb_bg {
 /* ====================================================== 1. lnb lnb_perfume (퍼퓸 카테고리 시작) */
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume{}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li {
-     border-radius: 10px;
+    border-radius: 10px;
 
 }
 
@@ -280,10 +284,11 @@ header #top_wrap .menu #user_menu .right_menu{
     position: relative;
     margin-left: 20px;
     line-height: 40px;
-    margin-top: 10px;
+    margin-top: 14px;
 }
 header #top_wrap .menu #user_menu .right_menu a {
     /* background-color: red; */
+    
 }
 
 /* 언어변경 */
