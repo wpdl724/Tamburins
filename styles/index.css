@@ -475,6 +475,7 @@ main .gift_item:hover img {
 main .gift .gift_images .gift_item:hover .overlay{
     opacity: 1;
     display: block;
+    cursor: default;
 }
 /* 6행 : 기프트 이벤트 배너 신제품 끝 */
 
