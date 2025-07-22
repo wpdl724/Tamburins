@@ -62,7 +62,7 @@ header #top_wrap h1 {
 }
 header #top_wrap h1 a {}
 header #top_wrap h1 a img {
-    width: 220px; height: 25px;
+    width: 186PX; height: 22px;
 }
 
 /* 카테고리 호버했을때 밑줄 효과 */
@@ -121,7 +121,7 @@ header #top_wrap .menu #gnb_wrap .category li {/* 네비+lnb 전체묶음영역 
 }
 header #top_wrap .menu #gnb_wrap .category li a {
     color: #fff; 
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 100200;
 
 }
