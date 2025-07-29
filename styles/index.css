@@ -1,6 +1,5 @@
 /* index.css */
-body * {
-}
+body{}
 
 
 /* main - 1행 , 2행, 3행,4행, 5행-배너1, 6행,7행 */
@@ -9,7 +8,7 @@ main{}
 /* 1행 : 신제품 영상  시작 */
 main .first_video {
     display: block;
-    width: 100%;
+    width: 1920px;
     height: 1000px;
     position: relative;
     overflow: hidden;
