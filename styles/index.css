@@ -365,13 +365,20 @@ main .event #event_bnr a {
     color: #fff;
     font-size: 1rem;
     font-size: 700;
+    border-bottom: 1px solid #fff;
 }
 main .event #event_bnr a em { /* 한정판매 문구 */
     color: #fff;
     font-size: 1rem;
     font-size: 700;
 }
-main .event #event_bnr .underline-link {
+main .event #event_bnr a span {
+    font-family: 'SUIT-Regular';
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+/* main .event #event_bnr .underline-link {
     position: relative; 
     display: inline-block;
     color: #fff;
@@ -380,10 +387,10 @@ main .event #event_bnr .underline-link {
     font-family: 'Playfair Display', serif;
     letter-spacing: 0.5px;
     border-bottom: 1px solid #fff;
-    /* text-decoration: none;
+    text-decoration: none;
     padding-bottom: 5px;
-    transition: color 0.3s ease; */
-}
+    transition: color 0.3s ease;
+} */
 main .event #event_bnr .underline-link span{
     color: #fff;
     font-family: 'SUIT', sans-serif;
