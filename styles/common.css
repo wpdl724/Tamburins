@@ -11,7 +11,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100%; 
     z-index: 1000; /* 영상 위에 올라오게 */
     background: transparent; 
     
@@ -49,16 +49,22 @@ header  #line_ad_wrap .line_ad_contents a img {
 
 /* ========================================================= S: 로고 위치 시작 */
 header #top_wrap{
-    padding-left: 96px; padding-right: 96px;
     /* background-color: #663399; */
+    padding-left: 96px; padding-right: 96px;
+    padding-top: 10px;
     padding-bottom: 10px;
 }
 
 /* 호버했을때 효과 */
-header #top_wrap .menu #gnb_wrap:hover .category li a { background-color:#fff; color:#000;}
+header #top_wrap .menu #gnb_wrap:hover .category li a { 
+    /* background-color:#fff;  */
+    color:#000;
+}
 header #top_wrap h1 {
     /* background-color: brown;  */
-    width: 220px; padding-top: 20px;
+    width: 190px; 
+    /* height: 40px; */
+    padding-top: 16px;
     line-height: 20px;
 }
 header #top_wrap h1 a {}
@@ -70,6 +76,7 @@ header #top_wrap h1 a img {
 header .category > li > a {
     position: relative;
     display: inline-block;
+    /* background-color: red; */
 }
 
 header .category > li > a::after {
@@ -81,7 +88,7 @@ header .category > li > a::after {
     width: 0;
     height: 2px;
     background-color: currentColor;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 header .category > li > a:hover::after {
@@ -91,20 +98,19 @@ header .category > li > a:hover::after {
 
 /* S: nav 시작 (로그인 등등과의 형제)*/
 header #top_wrap .menu {
-     /* background-color: rgb(118, 242, 178); 위치 확인용 색상 */
+    /* background-color: rgb(118, 242, 178); */
     display: flex;
     white-space: nowrap;/* 홈프래그런스 네비 글자 두줄바꿈 방지 */
 }
 
 /* gnb 카테고리 시작(고정되는 헤더 카테고리 영역) - gnb_wrap */
 header #top_wrap .menu #gnb_wrap {
-    /* background-color: rgb(233, 130, 233); 위치 확인용 색상 */
+    /* background-color: rgb(233, 130, 233);  */
     display: flex;
     margin-right: 300px;
     justify-content: start;
     
 }
-
 
 /* ============================================================== 메뉴(ul 카테고리) 리스트 시작 */
 header #top_wrap .menu #gnb_wrap .category {/* 네비 카테고리 */
@@ -123,7 +129,7 @@ header #top_wrap .menu #gnb_wrap .category li {/* 네비+lnb 전체묶음영역 
 header #top_wrap .menu #gnb_wrap .category li a {
     color: #fff; 
     font-size: 1rem;
-    font-weight: 100200;
+    font-weight: 200;
 
 }
 header #top_wrap .menu #gnb_wrap .category > li {
@@ -149,11 +155,11 @@ header #top_wrap .menu #gnb_wrap .category .lnb li a p{
 
 header #top_wrap .menu #gnb_wrap .category .lnb_bg { /* 네비 누르면 나오는 카테고리 이미지 (자식) */
     display: none;
-    /* background-color: aqua; 위치확인 */
+    /* background-color: aqua;  */
     background-color: #fff;
     position: absolute; 
     width: 100%;
-    left:0; top:60px;
+    left:0; top:74px;
     transition: all 0.3s ease;
     z-index: 1000;
     padding-left: 96px;
@@ -246,6 +252,7 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li a p {}
 
 /* 검색창 시작 */
 header #top_wrap .menu #user_menu {
+    width: 100%;
     /* background-color: palevioletred; 위치확인용 */
     display: flex;
     position: relative;
@@ -253,28 +260,29 @@ header #top_wrap .menu #user_menu {
 header #top_wrap .menu #user_menu .search {
     /* background-color: rgb(204, 191, 218); */
     margin-top: 10px;
-    /* position: relative; */
+    /* width: 100%; */
     /* line-height: 40px; */
 }
     
 header #top_wrap .menu #user_menu .search input {
+    font-family: 'SUIT-Regular';
+    color: #fff;
+    padding: 30px;
     background: transparent;
     border-bottom: 1px solid #fff;
     /* align-items: center;/ */
-    /* margin: 15px; */
     padding: 5px;    
     position: relative;
+    margin: 3px;
 }
 header #top_wrap .menu #user_menu .search .search_btn {
-    top: 0; bottom: 0; right: 2px;
-    margin-left:-20px;
-    margin-top: 0px;
-    margin-right: 15px;
+    position: absolute;
+    top: 2px; bottom: 20px; right: 20px;
 }
 header #top_wrap .menu #user_menu .search .search_btn img { 
     /* margin-bottom: -5px; */
     position: absolute;
-    top: 20px;
+    top: 20px; left: -100px; 
     width: 16px; height: 16px;
 }
 /* 검색창 끝 */
@@ -283,7 +291,7 @@ header #top_wrap .menu #user_menu .search .search_btn img {
 header #top_wrap .menu #user_menu .right_menu{ 
     /* background-color: skyblue; */
     position: relative;
-    margin-left: 20px;
+    margin-left: 10px;
     line-height: 40px;
     margin-top: 14px;
 }
