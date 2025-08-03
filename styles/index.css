@@ -80,11 +80,14 @@ main .new_wrap .swiper .swiper-wrapper .swiper-slide .product_item img{
 main .new_wrap .swiper .swiper-wrapper .swiper-slide .product_item #product{
 
 }
-main .new_wrap .swiper .swiper-wrapper .swiper-slide .product_item #cart{
+main .new_wrap .swiper .swiper-wrapper .swiper-slide .product_item .cart{
+    /* position: absolute;
+    top: 25px; left: 260px; */
     position: absolute;
-    top: 25px; left: 260px;
+    top: 30px; left: 266px; /* top : 25에서 30으로 변경함  260에서 266으로 변경*/
+    width: 18px; height: 18px;
 }
-main .new_wrap .swiper .swiper-wrapper .swiper-slide a:hover #cart {}
+main .new_wrap .swiper .swiper-wrapper .swiper-slide a:hover .cart {}
 main .new_wrap .swiper .swiper-wrapper .swiper-slide .txt_box{
     background-color: #F5F5F5;
     width: 310px; height: 120px;
@@ -193,7 +196,7 @@ main .reservation #show_txt_contents .show_btn{
 main .reservation #show_txt_contents .show_btn #reservation_btn {
     width: 100%;
 }
-main .reservation #show_txt_contents .show_btn #reservation_btn p {
+main .reservation #show_txt_contents .show_btn #reservation_btn span {
     font-size: 1rem;
     font-weight: 600;
     text-align: center;
@@ -208,7 +211,7 @@ main .reservation #show_txt_contents .show_btn #reservation_btn p {
 main .reservation #show_txt_contents .show_btn:hover {
     background-color: #000;
 }
-main .reservation #show_txt_contents .show_btn:hover #reservation_btn p {
+main .reservation #show_txt_contents .show_btn:hover #reservation_btn span {
     color: #fff;
 }
 /* 3행 : 전시 예약 끝 */
@@ -278,9 +281,11 @@ main #product_list .list_wrap .swiper .swiper-wrapper .swiper-slide .product_lis
 /* 이미지 위에 장바구니  */
 main #product_list .list_wrap .swiper .swiper-wrapper .swiper-slide .product_list #product{
 }
-main #product_list .list_wrap .swiper .swiper-wrapper .swiper-slide .product_list #cart{
+
+main #product_list .list_wrap .swiper .swiper-wrapper .swiper-slide .product_list .cart{
     position: absolute;
-    top: 25px; left: 260px;
+    top: 30px; left: 266px; /* top : 25에서 30으로 변경함  260에서 266으로 변경*/
+    width: 18px; height: 18px;
 }
 /* 내용 */
 main .list_wrap .swiper .swiper-wrapper .swiper-slide .txt_box{

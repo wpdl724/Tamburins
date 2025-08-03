@@ -5,6 +5,7 @@
 // 4. 2행 신제품 스와이퍼 
 // 5. 4행 향수 리스트 스와이퍼 
 // 6. 7행 인스타그램 스와이퍼 
+// 7. 장바구니 클릭시 장바구니 색상이 변경
 
 //a태그 누르면 되돌아가기 막기
 
@@ -73,7 +74,7 @@ const tabs = document.querySelectorAll(".menu_tab a");
       swiperInstances[index] = new Swiper(swipers[index], {
         slidesPerView: 4,
         spaceBetween: 30,
-        loop: true,
+        loop: false,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
@@ -147,4 +148,15 @@ const autoSwiper = new Swiper('#insta', {
 
 
 
+// 장바구니 클릭시 장바구니 채워지는 효과 (2행 슬라이드 / 4행 슬라이드 에서 상품 장바구니 아이콘 부분)
+const cartButtons = document.querySelectorAll("#cart");
 
+cartButtons.forEach(button => {
+  const icon = button.querySelector("#cart");
+  let isAdded = false;
+
+  button.addEventListener("click", () => {
+    isAdded = !isAdded;
+    icon.src = isAdded ? "images/cart_filled.svg" : "images/cart_empty.svg";
+  });
+});
