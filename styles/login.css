@@ -1,0 +1,90 @@
+/* login.css  : 로그인 페이지*/
+
+/* header 메인 페이지와 다른 부분 */
+/* -----------------  헤더 CSS  ----------------------  */
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 헤더 */
+header{background-color: skyblue; 
+display: none;}
+
+
+
+/* 메인 - 로그인 페이지 */
+main {
+    font-family: 'SUIT-Regular';
+    padding: 130px 740px;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+}
+main #login_wrap { /* 로그인 페이지 큰묶음 */
+    background-color: skyblue;
+    width: 440px;
+    height: 638px;
+    /* padding: 50px 0; */
+}
+main #login_wrap .tab_menu{
+    background-color: pink;
+    width: 100%;
+
+}
+main #login_wrap .tab_menu .tab{    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+main #login_wrap .tab_menu .tab ul{}
+main #login_wrap .tab_menu .tab ul li{ /* 탭 메뉴 리스트 */
+    background-color: yellow;
+    width: 220px; height: 50px;
+    line-height: 50px;
+    border-bottom: 2px solid rebeccapurple;
+}
+main #login_wrap .tab_menu .tab ul li .tab_login_btn{ /* 로그인 탭메뉴 */
+    width: 220px; height: 50px;
+    font-family: 'SUIT-Regular';
+
+   
+}
+main #login_wrap .tab_menu .tab ul li .tab_nonlogin_btn{/* 비회원 탭메뉴 */
+    width: 220px; height: 50px;
+    font-family: 'SUIT-Regular';
+
+}
+main #login_wrap .tab_menu .form_wrap{
+    background-color: gray
+}
+main #login_wrap .tab_menu .form_wrap form {
+    
+}
+main #login_wrap .tab_menu .form_wrap form .input_id{/* 아이디 입력 */}
+main #login_wrap .tab_menu .form_wrap form .input_id .inputField{ 
+    font-family: 'SUIT-Regular';
+    width: 440px; height: 50px;
+    background-color: aqua;
+    padding: 30px;
+}
+main #login_wrap .tab_menu .form_wrap form .input_pw{/* 비밀번호 입력 */}
+main #login_wrap .tab_menu .form_wrap form .input_pw .inputField{
+    font-family: 'SUIT-Regular';
+    width: 440px; height: 50px;
+    padding: 30px;
+}
+main #login_wrap .tab_menu .form_wrap form .login_black_btn{/* 로그인 버튼 (검정색 기본 btn) */
+    background-color: black;
+    width: 440px; height: 50px;
+    line-height: 50px;
+}
+
+main #login_wrap .tab_menu .form_wrap form .login_black_btn .standard_btn{
+    font-family: 'SUIT-Regular';
+    color: #fff;
+    
+
+}

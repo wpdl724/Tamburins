@@ -4,19 +4,182 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | 로그인</title>
+    <!-- font연결 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap" rel="stylesheet">
+    <!-- 파일 연결 -->
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/login.css">
+    <!-- <link rel="stylesheet" href="./index.html"> -->
+    <!-- <script src="./scripts/common.js" defer></script> -->
+    <script src="./scripts/index.js" defer></script>
 </head>
 <body>
     <div id="wrap">
         <header>
             <!-- 헤더 넣을곳 -->
+            <div id="line_ad_wrap"> <!-- 띠배너 제작 시작-->
+                <div class="line_ad_contents">
+                    <p>3만원이상 구매시 무료 배송 | 전 제품 구매시 ‘퍼퓸 보타리 2mL’ 증정 이벤트</p>
+                    <a href="#"><img src="./images/icons/close_small.png" alt="띠 배너 닫기"></a>
+                </div>
+            </div> <!-- 띠배너 끝 -->
+            <div id="top_wrap"><!-- 헤더 큰 묶음 시작 -->
+                <h1> <!-- 로고 : 로고클릭시 메인페이지로 이동 --><a href="#"><img src="./images/tamburins_logo_black.png" alt="탬버린즈 로고"></a></h1>
+                <nav class="menu">
+                    <div id="gnb_wrap"> <!-- gnb 카테고리 시작 (고정되는 헤더 카테고리)-->
+                        <ul class="category"> <!-- 메뉴 리스트 -->
+                            <li><a href="#">PERFUME</a>
+                                <div class="lnb_bg">
+                                    <ul class="lnb lnb_perfume"> <!-- lnb 퍼퓸 카테고리 시작 (마우스 호버시 보이는 영역) -->
+                                        <li>
+                                            <a href="#"><img src="./images/perfume/bottari_140.png" alt="보타리 신제품">
+                                            <p>신제품</p>
+                                            </a>
+                                        </li>
+                                        <li><a href="#"><img src="./images/perfume/perfume_01_140.png" id="perfume_01" alt="퍼퓸 상품"><p>퍼퓸</p></a></li>
+                                        <li><a href="#"><img src="./images/perfume/perfumeoil_01_140.png" id="perfume_02" alt="퍼퓸 오일 상품"><p>퍼퓸 오일</p></a></li>
+                                        <li><a href="#"><img src="./images/perfume/perfumebalm_01_140.png" id="perfume_03" alt="퍼퓸밤 상품"><p>퍼퓸 밤</p></a></li>
+                                        <li><a href="#"><img src="./images/perfume/perfumewear_01_140.png" id="perfume_04" alt="퍼퓸 웨어 상품 "><p>퍼퓸 웨어</p></a></li>
+                                    </ul><!-- lnb 퍼퓸 카테고리 끝(마우스호버시 보이는 영역) -->
+                                </div>
+                            </li>
+                            <li><a href="#">HAND&LIP</a>
+                                <div class="lnb_bg">
+                                    <ul class="lnb lnb_handlip"> <!-- lnb 핸드앤립 카테고리 시작 -->
+                                        <li><a href="#"><img src="./images/hand&lip/handlip_01_140.png" id="handlip_01" alt="쉘 퍼퓸 핸드 상품"><p>쉘 퍼퓸 핸드</p></a></li>
+                                        <li><a href="#"><img src="./images/hand&lip/handlip_02_140.png" id="handlip_02" alt="에그 립밤 상품"><p>에그 립밤</p></a></li>
+                                        <li><a href="#"><img src="./images/hand&lip/hadlip_03_140.png" id="handlip_03" alt="체인 핸드 상품"><p>체인 핸드</p></a></li>
+                                        <li><a href="#"><img src="./images/hand&lip/handlip_04_140.png" id="handlip_04" alt="핸드앤립 웨어 상품"><p>핸드앤립 웨어</p></a></li>
+                                    </ul><!-- lnb 핸드앤립 카테고리 끝 -->
+                                </div>
+                            </li>
+                            <li><a href="#">BODY</a>
+                                <div class="lnb_bg">
+                                    <ul class="lnb lnb_body"> <!-- lnb 바디 카테고리 시작 -->
+                                        <li><a href="#"><img src="./images/body/body_140.png" alt="샤워리바디 상품"><p>샤워리바디</p></a></li>
+                                        <li><a href="#"><img src="./images/body/handbody_140.png" alt="퍼퓸드 핸드앤바디 상품"><p>퍼퓸드 핸드앤바디</p></a></li>
+                                    </ul><!-- lnb 바디 카테고리 끝 -->
+                                </div>
+                            </li>
+                            <li><a href="#">HOME FRAGRANCE</a>
+                                <div class="lnb_bg">
+                                    <ul class="lnb lnb_home_f"> <!-- lnb 홈 프래그런스 카테고리 시작 -->
+                                        <li><a href="#"><img src="./images/home_fragrance/car_140.png" alt="카디퓨저 상품"><p>카 디퓨저</p></a></li>
+                                        <li><a href="#"><img src="./images/home_fragrance/home_140.png" alt="룸 프래그런스 상품"><p>룸 프래그런스</p></a></li>
+                                        <li><a href="#"><img src="./images/home_fragrance/candle_140.png" alt="체인 핸드 상품"><p>퍼퓸 캔들</p></a></li>
+                                    </ul><!-- lnb  홈 프래그런스 카테고리 끝 -->
+                                </div>
+                            </li>
+                            <li><a href="#">STORE</a>
+                                <div class="lnb_bg">
+                                    <ul class="lnb lnb_store"> <!-- lnb 스토어 카테고리 시작 -->
+                                        <li><a href="#"><img src="./images/store/kr_140.png" alt="대한민국 스토어"><p>대한민국</p></a></li>
+                                        <li><a href="#"><img src="./images/store/jp_140.png" alt="일본 스토어"><p>일본</p></a></li>
+                                        <li><a href="#"><img src="./images/store/ch_140.png" alt="중국 스토어"><p>중국</p></a></li>
+                                        <li><a href="#"><img src="./images/store/gallery_140.png" alt="전시"><p>전시</p></a></li>
+                                    </ul><!-- lnb  홈 스토어 카테고리 끝 -->
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="user_menu"><!-- 검색창,언어변경,로그인,장바구니 -->
+                        <div class="search">
+                            <input type="search" placeholder="">
+                            <button type="submit" class="search_btn">
+                                <img src="./images/icons/search_b.png" alt="검색하기 버튼">
+                            </button>
+                        </div>
+                        <div class="right_menu">
+                            <a href="#"><img src="./images/icons/lang_b.png" class="lang"  alt="언어변경"></a>
+                            <a href="./login.html"><img src="./images/icons/login_b.png" class="login" alt="로그인"></a>
+                            <a href="#"><img src="./images/icons/cart_Black.png" class="cart" alt="장바구니"></a>
+                        </div>
+                    </div>
+                </nav>
+            </div> <!-- gnb 카테고리 끝 -->
         </header>
-        <main>
-            <div class="login"><!-- 로그인 페이지 시작 -->
-
-            </div><!-- 로그인 페이지 끝 -->
+        <main> <!-- 로그인 페이지 -->
+            <div id="login_wrap"><!-- 로그인 페이지 큰묶음 시작 -->
+                <div class="tab_menu">
+                    <div class="tab">
+                        <ul class="tab_list"><!-- 탭 메뉴 리스트 (로그인, 비회원)-->
+                        <li><a href="#" class="tab_login_btn">로그인</a></li>
+                        <!-- <li><a href="#" class="tab_nonlogin_btn">비회원 주문조회</a></li> -->
+                    </ul>
+                        <ul class="tab_list">
+                            <li><a href="#" class="tab_nonlogin_btn">비회원 주문조회</a></li>
+                        </ul>
+                    </div>
+                    <div class="form_wrap"><!-- 로그인 폼 묶음 시작 -->
+                        <form >
+                            <div class="input_id"><!-- 아이디 입력 -->
+                                <input id="sigininEmail" type="text" class="inputField" placeholder="아이디(이메일)" name="sigininEmail">
+                            </div>
+                            <div class="input_pw"><!-- 비밀번호 입력 -->
+                                <input id="sigininPw" type="password" class="inputField" placeholder="비밀번호" name="sigininPassword">
+                            </div>
+                            <div class="login_black_btn"><!-- 로그인 버튼 (검정색-기본btn) -->
+                                <button type="submit" class="standard_btn">로그인</button>
+                            </div>
+                        </form>
+                        <div class="login_btns"><!-- 카카오로그인, 네이버 로그인  -->
+                            <a href="#" class="kakaoBtn"><p>카카오 로그인</p></a>
+                            <a href="#" class="naverBtn"><p>네이버 로그인</p></a>
+                        </div>
+                        <div class="login_txt"><!-- 아이디, 비밀번호찾기 -->
+                            <a href="#" class="find_id">아이디 찾기</a>
+                            <a href="#" class="find_pw">비밀번호 찾기</a>
+                        </div>
+                        <div class="join_btn"><!-- 회원가입 버튼 -->
+                            <a href="#" class="join">회원가입</a>
+                        </div>
+                    </div><!-- 로그인 폼 묶음 끝 -->
+                </div>
+            </div><!-- 로그인 페이지 큰묶음 끝 -->
         </main>
         <footer>
             <!-- 푸터 넣을곳 -->
+             <div id="footer_wrap">
+            <div class="footer_top">
+                <div class="top_contents_1">
+                    <a href="#"><p><em>매장안내</em></p></a>
+                    <a href="#"><p>대한민국</p></a>
+                    <a href="#"><p>일본</p></a>
+                    <a href="#"><p>중국</p></a>
+                    <a href="#"><p>전시</p></a>
+                </div>
+                <div class="top_contents_2">
+                    <a href="#"><p><em>고객서비스</em></p></a>
+                    <a href="#"><p>자주 묻는 질문</p></a>
+                    <a href="#"><p>1:1문의</p></a>
+                    <a href="#"><p>비회원 주문조회</p></a>
+                    <a href="#"><p>교환 및 반품</p></a>
+                </div>
+                <div class="top_contents_3">
+                    <a href="#"><p><em>법적고지</em></p></a>
+                    <a href="#"><p>공지사항</p></a>
+                    <a href="#"><p>이용약관</p></a>
+                    <a href="#"><p>개인정보처리방침</p></a>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <address>
+                    <p>주)아이아이컴바인드 <br>사업자등록번호: 119-86-38589 | 대표자: 김한국 <br> 서울특별시 마포구 어울마당로5길 41 | 대표번호: 1644-1246 | 이메일:cs@tamburins.com <br> 개인정보 보호 책임자: 정태호 | 호스팅 서비스 사업자: Aws | 통신판매업신고: 제 2014-서울마포-1050호 <a href="# "><em>사업자정보확인</em></a></p> 
+                </address>
+                <div class="sns_wrap">
+                    <a href="https://pf.kakao.com/_RkqIj" target="_blank"><img src="./images/footer/kakao.png" alt="카카오톡"></a>
+                    <a href="https://www.facebook.com/tamburinsofficial/" target="_blank"><img src="./images/footer/facebook.png" alt="페이스북"></a>
+                    <a href="https://www.instagram.com/tamburinsofficial/?hl=ko" target="_blank"><img src="./images/footer/instagram.png" alt="인스타그램"></a>
+                    <a href="https://weibo.com/tamburinsofficial" target="_blank"><img src="./images/footer/Weibo_black.png" id ="weibo" alt="웨이보"></a>
+                </div>
+            </div>
+        </div>
         </footer>
     </div>
 </body>
