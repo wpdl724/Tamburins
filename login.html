@@ -13,26 +13,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@300..700&display=swap" rel="stylesheet">
     <!-- 파일 연결 -->
     <link rel="stylesheet" href="./styles/reset.css">
-    <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/login.css">
-    <!-- <link rel="stylesheet" href="./index.html"> -->
-    <!-- <script src="./scripts/common.js" defer></script> -->
-    <script src="./scripts/index.js" defer></script>
+    <link rel="icon" type="image/png" href="./images/favicon/tamburins_favicon.png">
+    <script src="./scripts/login.js" defer></script>
 </head>
 <body>
     <div id="wrap">
         <header>
-            <!-- 헤더 넣을곳 -->
-            <div id="line_ad_wrap"> <!-- 띠배너 제작 시작-->
-                <div class="line_ad_contents">
-                    <p>3만원이상 구매시 무료 배송 | 전 제품 구매시 ‘퍼퓸 보타리 2mL’ 증정 이벤트</p>
-                    <a href="#"><img src="./images/icons/close_small.png" alt="띠 배너 닫기"></a>
-                </div>
-            </div> <!-- 띠배너 끝 -->
             <div id="top_wrap"><!-- 헤더 큰 묶음 시작 -->
-                <h1> <!-- 로고 : 로고클릭시 메인페이지로 이동 --><a href="#"><img src="./images/tamburins_logo_black.png" alt="탬버린즈 로고"></a></h1>
+                <h1> <!-- 로고 : 로고클릭시 메인페이지로 이동 --><a href="./index.html"><img src="./images/tamburins_logo_black.png" alt="탬버린즈 로고"></a></h1>
                 <nav class="menu">
-                    <div id="gnb_wrap"> <!-- gnb 카테고리 시작 (고정되는 헤더 카테고리)-->
+                    <div id="gnb_wrap"> <!-- gnb 카테고리 시작 (네비 탭 카테고리)-->
                         <ul class="category"> <!-- 메뉴 리스트 -->
                             <li><a href="#">PERFUME</a>
                                 <div class="lnb_bg">
@@ -88,22 +79,21 @@
                             </li>
                         </ul>
                     </div>
-                    <div id="user_menu"><!-- 검색창,언어변경,로그인,장바구니 -->
+                    <div id="user_menu"><!-- 검색창,언어변경,로그인,장바구니  큰 묶음 시작-->
                         <div class="search">
                             <input type="search" placeholder="">
-                            <button type="submit" class="search_btn">
-                                <img src="./images/icons/search_b.png" alt="검색하기 버튼">
-                            </button>
+                            <button type="submit" class="search_btn"><img src="./images/icons/search_b.png" alt="검색하기 버튼"></button>
                         </div>
-                        <div class="right_menu">
-                            <a href="#"><img src="./images/icons/lang_b.png" class="lang"  alt="언어변경"></a>
+                        <div class="right_menu"> <!-- 언어변경, 로그인, 장바구니 묶음-->
+                            <a href="#"><img src="./images/icons/lang.png" class="lang"  alt="언어변경"></a>
                             <a href="./login.html"><img src="./images/icons/login_b.png" class="login" alt="로그인"></a>
                             <a href="#"><img src="./images/icons/cart_Black.png" class="cart" alt="장바구니"></a>
                         </div>
-                    </div>
-                </nav>
+                    </div><!-- 검색창,언어변경,로그인,장바구니  큰 묶음 끝-->
+                </nav> <!-- 네비 끝 -->
             </div> <!-- gnb 카테고리 끝 -->
-        </header>
+        </header> <!-- 헤더 끝 -->
+
         <main> <!-- 로그인 페이지 -->
             <div id="login_wrap"><!-- 로그인 페이지 큰묶음 시작 -->
                 <div class="tab_menu">
@@ -145,7 +135,7 @@
         </main>
         <footer>
             <!-- 푸터 넣을곳 -->
-             <div id="footer_wrap">
+            <div id="footer_wrap">
             <div class="footer_top">
                 <div class="top_contents_1">
                     <a href="#"><p><em>매장안내</em></p></a>
