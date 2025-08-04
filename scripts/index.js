@@ -8,7 +8,14 @@
 // 7. 장바구니 클릭시 장바구니 색상이 변경
 
 //a태그 누르면 되돌아가기 막기
-
+/* a 링크 이동 막기 */
+document.querySelectorAll('a').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+  if (this.getAttribute('href') === '#' || this.getAttribute('href') === '') {
+          e.preventDefault();
+      }
+  });
+});
 /*  =============- 스와이퍼 js */
 /* ============================================ 2행 (신제품)_ new 스와이퍼 */
 const newSwiper = new Swiper('#new', {
@@ -137,7 +144,7 @@ const autoSwiper = new Swiper('#insta', {
     loop: true,                // 무한 반복
     speed: 1000,               // 슬라이드 전환에 걸리는 시간 (ms)
     autoplay: {
-      delay: 3000,             // 슬라이드 유지 시간 (ms)
+    delay: 3000,             // 슬라이드 유지 시간 (ms)
     disableOnInteraction: false,
     },
     navigation: {
@@ -149,14 +156,14 @@ const autoSwiper = new Swiper('#insta', {
 
 
 // 장바구니 클릭시 장바구니 채워지는 효과 (2행 슬라이드 / 4행 슬라이드 에서 상품 장바구니 아이콘 부분)
-const cartButtons = document.querySelectorAll("#cart");
+const cartButtons = document.querySelectorAll(".cart");
 
 cartButtons.forEach(button => {
-  const icon = button.querySelector("#cart");
+  const icon = button.querySelectorAll(".cart");
   let isAdded = false;
 
   button.addEventListener("click", () => {
     isAdded = !isAdded;
-    icon.src = isAdded ? "images/cart_filled.svg" : "images/cart_empty.svg";
+    icon.src = isAdded ? "images/cart_Black_full.png" : "images/cart_Black_full.png";
   });
 });

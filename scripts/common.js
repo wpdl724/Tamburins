@@ -1,6 +1,13 @@
 /* common.js */
 // header , 띠배너 js
-
+/* a 링크 이동 막기 */
+document.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+    if (this.getAttribute('href') === '#' || this.getAttribute('href') === '') {
+            e.preventDefault();
+        }
+    });
+});
 // --------------- 헤더 
 /* 마우스 올렸을때 lnb 나타나는 효과 */
 document.addEventListener("DOMContentLoaded", function () {
@@ -60,11 +67,11 @@ lang: {
     },
     login: {
     white: './images/icons/login_WW.png',
-    black: './images/icons/login_b.png',
+    black: './images/icons/login_BB.png',
     },
     cart: {
-    white: './images/icons/cart_W.png',
-    black: './images/icons/cart_Black.png',
+    white: './images/icons/cart_White_empty.png',
+    black: './images/icons/cart_Black_empty.png',
     },
     search: {
     white: './images/icons/white_s.png',
