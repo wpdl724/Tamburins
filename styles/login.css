@@ -310,6 +310,7 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg { /* 네비 누르면 나오�
 
 /*=========================================   메인 - 로그인 페이지 */
 main {
+
     font-family: 'SUIT-Regular';
     padding: 160px 740px;
     height: 100vh;
@@ -320,6 +321,7 @@ main #login_wrap { /* 로그인 페이지 큰묶음 */
     /* background-color: skyblue; */
     width: 440px;
     height: 638px;
+    /* background-color: yellow; */
     /* padding: 50px 0; */
 }
 main #login_wrap .tab_menu{ /* 탭 메뉴*/
@@ -343,8 +345,6 @@ main #login_wrap .tab_menu .tab ul li{ /* 탭 메뉴 리스트 */
 main #login_wrap .tab_menu .tab ul li .tab_login_btn{ /* 로그인 탭메뉴 */
     width: 220px; height: 50px;
     font-family: 'SUIT-Regular';
-
-   
 }
 main #login_wrap .tab_menu .tab ul li .tab_nonlogin_btn{/* 비회원 탭메뉴 */
     width: 220px; height: 50px;
@@ -393,7 +393,7 @@ main #login_wrap .tab_menu .login_btn_wrap{
 }
 main #login_wrap .tab_menu .login_btn_wrap .login_btns{
     /* background-color: palevioletred;
-   width: 440px; height: 50px;
+    width: 440px; height: 50px;
     line-height: 50px; */
 }
 main #login_wrap .tab_menu .login_btn_wrap .login_btns #kakao{
@@ -448,21 +448,22 @@ main #login_wrap .tab_menu .login_btn_wrap .login_txt_wrap .join_btn{ /* 회원�
     width: 74px; height: 34px;
 
 }
-main #login_wrap .tab_menu .login_btn_wrap .login_txt_wrap .join_btn:hover{
+main #login_wrap .tab_menu .login_btn_wrap .login_txt_wrap .join_btn:hover {
     background-color: #000;
     border: none;
     color: #fff;
 }
-main #login_wrap .tab_menu .login_btn_wrap .login_txt_wrap .join_btn .join:hover{
+main #login_wrap .tab_menu .login_btn_wrap .login_txt_wrap .join_btn:hover .join{
     color: #fff;
 }
+
 main #login_wrap .tab_menu .login_btn_wrap .login_txt_wrap .join_btn .join{
     font-family: 'SUIT-Regular';
     line-height: 30px;
 }
 /* --------------------------- 푸터 css --------------------------*/
 footer {
-    width: 1920px;
+    width: 100%;
     height: 390px;
     /* background-color: yellowgreen; */
     background-color: #000;
