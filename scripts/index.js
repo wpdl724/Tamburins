@@ -156,14 +156,60 @@ const autoSwiper = new Swiper('#insta', {
 
 
 // 장바구니 클릭시 장바구니 채워지는 효과 (2행 슬라이드 / 4행 슬라이드 에서 상품 장바구니 아이콘 부분)
-const cartButtons = document.querySelectorAll(".cart");
+// const cartButtons = document.querySelectorAll(".cart");
 
-cartButtons.forEach(button => {
-  const icon = button.querySelectorAll(".cart");
-  let isAdded = false;
+// cartButtons.forEach(button => {
+//   const icon = button.querySelectorAll(".cart");
+//   let isAdded = false;
 
-  button.addEventListener("click", () => {
-    isAdded = !isAdded;
-    icon.src = isAdded ? "images/cart_Black_full.png" : "images/cart_Black_full.png";
+//   button.addEventListener("click", () => {
+//     isAdded = !isAdded;
+//     icon.src = isAdded ? "images/cart_Black_full.png" : "images/cart_Black_full.png";
+//   });
+// });
+
+
+/* 장바구니 아이콘 클릭시 이미지 변경 */
+// const cartBtn = document.querySelectorAll('.cart');
+// console.log(cartBtn);
+
+// for (i of cartBtn){
+//   console.log(i);
+//   i.addEventListener('click', () => {
+//     console.log('눌림 테스트')
+//     if(cartBtn =>('')){
+//       document.getElementByid.src = "./images/icons/cart_Black_full.png"
+//     }
+//   })
+// }
+
+const cartBtn = document.querySelectorAll('.cart');
+console.log(cartBtn)
+
+for (let i of cartBtn) {
+  i.addEventListener('click', (e) => {
+    e.preventDefault(); // <a> 링크 이동 방지
+    console.log('눌림 테스트');
+    
+    // 현재 이미지 주소가 비어있는 장바구니 이미지일 때
+    if (i.src.includes("cart_Black_empty.png")) {
+      i.src = "./images/icons/cart_Black_full.png"; // 채워진 이미지로 변경
+      alert("선택하신 상품이 장바구니에 담겼습니다.");
+    } else {
+      i.src = "./images/icons/cart_Black_empty.png"; // 다시 빈 이미지로 변경
+      alert("장바구니 상품을 취소합니다.");
+    }
   });
-});
+}
+
+
+
+
+// for (let i of cartBtn) {
+//   i.addEventListener('click', (e) => {
+//     e.preventDefault(); // <a> 링크 이동 방지
+//     console.log('눌림 테스트');
+//     i.src = "./images/icons/cart_Black_full.png";
+//   }
+// );
+// }

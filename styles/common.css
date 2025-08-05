@@ -313,7 +313,7 @@ header #top_wrap .menu #user_menu .right_menu a .login {
 }
 
 /* 장바구니 */
-header #top_wrap .menu #user_menu .right_menu a .cart { width: 20px; height: 20px;}
+header #top_wrap .menu #user_menu .right_menu a .header_cart { width: 20px; height: 20px;}
 
 
 /* 검색창 - 파란색 X표시 제거 */

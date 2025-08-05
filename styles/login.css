@@ -10,6 +10,7 @@ header {
 }
 header #top_wrap /* 헤더 큰 묶음 */{ 
     /* background-color: rgb(255, 255, 172); 위치 확인용 색상 */
+    width: 100%;
     display:flex;
     justify-content: space-between;
     flex-flow: row nowrap;
@@ -42,14 +43,15 @@ header #top_wrap .menu #gnb_wrap {
 
 /* ============================================================== 메뉴(ul 카테고리) 리스트 시작 */
 header #top_wrap .menu #gnb_wrap .category {/* 네비 카테고리 */
-    /* background-color: lime; 위치 확인용 색상 */
+    /* background-color: lime;  */
     display: flex;
     flex-flow: row nowrap;
     width: 100%;
     margin-top: 20px;  
 }
 header #top_wrap .menu #gnb_wrap .category li {/* 네비+lnb 전체묶음영역  */
-    /* background-color: rgb(133, 96, 227); 위치 확인용 색상 */
+    /* background-color: rgb(133, 96, 227);  */
+
     margin-right: 50px; 
     /* line-height: 70px; */
     
@@ -135,6 +137,8 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg { /* 네비 누르면 나오�
 header #top_wrap .menu #gnb_wrap .category > li:hover .lnb_bg {
     /* background-color:tan; */
     display: block;
+        width: 100%;
+
 }
 
 /* ====================================================== 1. lnb lnb_perfume (퍼퓸 카테고리 시작) */
@@ -157,7 +161,8 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a p {}
 /* ======================================================== 2. lnb_handlip (핸드앤립 카테고리 시작) */
 header #top_wrap .menu #gnb_wrap .category li {}
 header #top_wrap .menu #gnb_wrap .category li a {}
-header #top_wrap .menu #gnb_wrap .category .lnb_bg {}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg {
+}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_handlip {
 }
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_handlip li {}
@@ -185,8 +190,11 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_body li a p {}
 header #top_wrap .menu #gnb_wrap .category li {
 }
 header #top_wrap .menu #gnb_wrap .category li a {}
-header #top_wrap .menu #gnb_wrap .category .lnb_bg {}
-header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f {    
+header #top_wrap .menu #gnb_wrap .category .lnb_bg {
+    width: 100%;
+}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f {   
+    
 }
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f li {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f li a {}
@@ -286,7 +294,7 @@ header #top_wrap .menu #user_menu .right_menu a .cart { width: 20px; height: 20p
 header #top_wrap .menu #gnb_wrap .category .lnb_bg { /* 네비 누르면 나오는 카테고리 이미지 (자식) */
     display: none;
     /* background-color: aqua;  */
-    background-color: #fff;
+    /* background-color: #fff; */
     position: absolute; 
     width: 100%;
     left:0; top:74px;
@@ -296,7 +304,6 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg { /* 네비 누르면 나오�
     padding-top: 30.5px;
     padding-bottom: 30.5px;
 }
-
 
 @font-face {
     font-family: 'SUIT-Regular';
@@ -582,3 +589,46 @@ footer #footer_wrap .footer_bottom .sns_wrap a img{
 footer #footer_wrap .footer_bottom .sns_wrap a #weibo {
     padding:2px;
 }
+
+
+/* 탭 메뉴 효과 설정 */
+.tab ul {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .tab ul li {
+    width: 50%;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tab ul li.active {
+    border-bottom: 2px solid #000;
+  }
+  
+  .tab ul li button {
+    background: none;
+    border: none;
+    width: 100%;
+    height: 50px;
+    font-size: 1rem;
+    color: #999;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  
+  .tab ul li.active button {
+    color: #000;
+    font-weight: 600;
+  }
+  
+  /* 숨김처리 */
+  .form_content {
+    display: none;
+  }
+  
+  .form_content.active {
+    display: block;
+  }
