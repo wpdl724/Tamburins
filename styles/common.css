@@ -323,7 +323,7 @@ header #top_wrap .menu #user_menu .right_menu a .header_cart { width: 20px; heig
 
 /* --------------------------- 푸터 css --------------------------*/
 footer {
-    width: 1920px;
+    width: 100%;
     height: 390px;
     /* background-color: yellowgreen; */
     background-color: #000;
