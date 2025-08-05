@@ -393,6 +393,7 @@ main #login_wrap .tab_menu .form_wrap form .login_black_btn{/* 로그인 버튼 
 main #login_wrap .tab_menu .form_wrap form .login_black_btn .standard_btn{
     font-family: 'SUIT-Regular';
     color: #fff;
+    padding: 10px 196px;
 }
 /* --------------------- 로그인 폼 끝 */
 main #login_wrap .tab_menu .login_btn_wrap{
