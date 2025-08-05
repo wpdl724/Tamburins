@@ -593,23 +593,23 @@ footer #footer_wrap .footer_bottom .sns_wrap a #weibo {
 
 
 /* 탭 메뉴 효과 설정 */
-.tab ul {
+/* .tab ul {
     display: flex;
     justify-content: space-around;
     margin-bottom: 20px;
-  }
-  
-  .tab ul li {
-    width: 50%;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .tab ul li.active {
-    border-bottom: 2px solid #000;
-  }
-  
-  .tab ul li button {
+}
+
+.tab ul li {
+width: 50%;
+text-align: center;
+border-bottom: 1px solid #ccc;
+}
+
+.tab ul li.active {
+border-bottom: 2px solid #000;
+}
+
+.tab ul li button {
     background: none;
     border: none;
     width: 100%;
@@ -618,18 +618,18 @@ footer #footer_wrap .footer_bottom .sns_wrap a #weibo {
     color: #999;
     font-weight: 400;
     cursor: pointer;
-  }
-  
-  .tab ul li.active button {
-    color: #000;
-    font-weight: 600;
-  }
-  
-  /* 숨김처리 */
-  .form_content {
-    display: none;
-  }
-  
-  .form_content.active {
-    display: block;
-  }
+}
+
+.tab ul li.active button {
+color: #000;
+font-weight: 600;
+} */
+
+/* 숨김처리 */
+/* .form_content {
+display: none;
+}
+
+.form_content.active {
+display: block;
+} */
