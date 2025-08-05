@@ -462,7 +462,7 @@ main #login_wrap .tab_menu .login_btn_wrap .login_txt_wrap .join_btn .join{
 }
 /* --------------------------- 푸터 css --------------------------*/
 footer {
-    width: 100%;
+    width: 1920px;
     height: 390px;
     /* background-color: yellowgreen; */
     background-color: #000;
