@@ -1,24 +1,12 @@
 /* login.css  : 로그인 페이지*/
 
-/* header 메인 페이지와 다른 부분 */
 /* -----------------  헤더 CSS  ----------------------  */
-@font-face {
-    font-family: 'SUIT-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body{
-    width: 100%;
-}
-/* 헤더 */
-/*  */
 header {
-    display: flex; 
-    flex-flow:row nowrap;
-    background-color: yellow;
-    width: 100%;
+    position: sticky;
+    background-color: #fff;
+    top: 0px; /*  도달했을때 고정시킬 위치 */
+    padding: 5px;
+    z-index: 10;
 }
 header #top_wrap /* 헤더 큰 묶음 */{ 
     /* background-color: rgb(255, 255, 172); 위치 확인용 색상 */
@@ -27,61 +15,102 @@ header #top_wrap /* 헤더 큰 묶음 */{
     flex-flow: row nowrap;
     position: relative;
 }
+
+
 /* ========================================================= S: 로고 위치 시작 */
 header #top_wrap{
     /* background-color: #663399; */
-    padding: 10px 96px;
+    padding-left: 96px; padding-right: 96px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-header #top_wrap h1 {
-    background-color: brown; 
-    width: 190px; 
-    padding-top: 16px;
-    line-height: 20px;
-    
-}
-header #top_wrap h1 a {}
-header #top_wrap h1 a img { /* 헤더 로고 크기 */
-    width: 186px; height: 22px;
-    
-}
-/* ============================================================== E: 로고 위치 끝 */
 
-/* S: nav 시작 (로그인 등등과의 형제)*/
 header #top_wrap .menu {
+    /* background-color: rgb(118, 242, 178); */
     display: flex;
     white-space: nowrap;/* 홈프래그런스 네비 글자 두줄바꿈 방지 */
 }
 
 /* gnb 카테고리 시작(고정되는 헤더 카테고리 영역) - gnb_wrap */
 header #top_wrap .menu #gnb_wrap {
+    /* background-color: rgb(233, 130, 233);  */
+    display: flex;
+    margin-right: 300px;
+    justify-content: start;
+    
 }
 
 /* ============================================================== 메뉴(ul 카테고리) 리스트 시작 */
 header #top_wrap .menu #gnb_wrap .category {/* 네비 카테고리 */
-    padding: 0 300px;
-    width: 1200px;
-    display: flex; flex-flow: row nowrap;
-    align-items: center;
-    background-color: palevioletred;
-
+    /* background-color: lime; 위치 확인용 색상 */
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    margin-top: 20px;  
 }
 header #top_wrap .menu #gnb_wrap .category li {/* 네비+lnb 전체묶음영역  */
-    line-height: 60px;
-    margin-left: 30px;
-    justify-content: space-around;
+    /* background-color: rgb(133, 96, 227); 위치 확인용 색상 */
+    margin-right: 50px; 
+    /* line-height: 70px; */
+    
 }
-header #top_wrap .menu #gnb_wrap .category li a {}
+
+/* 호버했을때 효과 */
+header #top_wrap .menu #gnb_wrap:hover .category li a { 
+    /* background-color:#fff;  */
+    /* color:#000; 애초에 검정색 글자 밑줄효과만 있으면 되서 필요없음 */
+}
+header #top_wrap h1 {
+    /* background-color: brown;  */
+    width: 190px; 
+    /* height: 40px; */
+    padding-top: 16px;
+    line-height: 20px;
+}
+header #top_wrap h1 a {}
+header #top_wrap h1 a img {
+    width: 186px; height: 22px;
+}
+header .category{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/* 카테고리 호버했을때 밑줄 효과 */
+header .category > li > a {
+    position: relative;
+    display: inline-block;
+    /* background-color: red; */
+}
+
+header .category > li > a::after {
+    content: ''; 
+    position: absolute; top: 20px;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%); 
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: all 0.5s ease;
+}
+
+header .category > li > a:hover::after {
+    width: 100%;
+}
+/* ============================================================== E: 로고 위치 끝 */
+
 /* ---------------------  공통선택자 lnb ---------------------*/
 header #top_wrap .menu #gnb_wrap .category .lnb{ /* lnb 부모 */
     display: flex;
     justify-content: start;
-    align-items: center; 
+    align-items: center;
     
 }
 header #top_wrap .menu #gnb_wrap .category .lnb li {}
 header #top_wrap .menu #gnb_wrap .category .lnb li a p{
     padding-top: 10px;
-    font-size: 0.875rem; 
+    font-size: 0.875rem;
     
 }
 
@@ -101,8 +130,11 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg { /* 네비 누르면 나오�
     padding-bottom: 30.5px;
 }
 
+
+
 header #top_wrap .menu #gnb_wrap .category > li:hover .lnb_bg {
     /* background-color:tan; */
+    display: block;
 }
 
 /* ====================================================== 1. lnb lnb_perfume (퍼퓸 카테고리 시작) */
@@ -113,9 +145,7 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li {
 }
 
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a {}
-header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a img {
-    display: block;
-}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_perfume li a img {display: block;}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg li a img:hover {/* 공통 선택 - 호버 효과 */
     box-shadow: 0 0 6px 1px grey;
     border-radius: 10px;
@@ -132,8 +162,7 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_handlip {
 }
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_handlip li {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_handlip li a {}
-header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_handlip li a img {    display: block;
-}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_handlip li a img {display: block;}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_handlip li a p {
 
 }
@@ -148,8 +177,7 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_body {
 }
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_body li {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_body li a {}
-header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_body li a img {    display: block;
-}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_body li a img {display: block;}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_body li a p {}
 /* 3. lnb_body (바디 카테고리 끝) */
 
@@ -162,8 +190,7 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f {
 }
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f li {}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f li a {}
-header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f li a img {    display: block;
-}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f li a img {display: block;}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_home_f li a {}
 /* 4. lnb_home_f (홈 프래그런스 카테고리 끝) */
 
@@ -179,8 +206,7 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li {
 
 }
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li a {}
-header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li a img {display: block;
-}
+header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li a img {display: block;}
 header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li a p {}
 /* 5. lnb_store (스토어 카테고리 끝) / gnb_wrap 끝*/
 
@@ -188,14 +214,14 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg .lnb_store li a p {}
 header #top_wrap .menu #user_menu {
     width: 100%;
     /* background-color: palevioletred; 위치확인용 */
-    display: flex; flex-flow: row nowrap;
+    display: flex;
     position: relative;
 }
 header #top_wrap .menu #user_menu .search {
-    background-color: rgb(204, 191, 218);
+    /* background-color: rgb(204, 191, 218); */
     margin-top: 10px;
-    width: 100%;
-    line-height: 40px;
+    /* width: 100%; */
+    /* line-height: 40px; */
 }
     
 header #top_wrap .menu #user_menu .search input {
@@ -204,32 +230,33 @@ header #top_wrap .menu #user_menu .search input {
     padding: 30px;
     background: transparent;
     border-bottom: 1px solid #000;
-    align-items: center;
+    /* align-items: center;/ */
     padding: 5px;    
     position: relative;
     margin: 3px;
 }
 header #top_wrap .menu #user_menu .search .search_btn {
-
+    position: absolute;
+    top: 2px; bottom: 20px; right: 20px;
 }
 header #top_wrap .menu #user_menu .search .search_btn img { 
-    /* background-color: blue; */
+    /* margin-bottom: -5px; */
     position: absolute;
-    top: 24px; left: 190px; 
+    top: 20px; left: -100px; 
     width: 16px; height: 16px;
 }
 /* 검색창 끝 */
 
 /* 오른쪽 user_menu */
 header #top_wrap .menu #user_menu .right_menu{ 
-    background-color: skyblue;
+    /* background-color: skyblue; */
     position: relative;
     margin-left: 10px;
     line-height: 40px;
     margin-top: 14px;
 }
 header #top_wrap .menu #user_menu .right_menu a {
-    
+    /* background-color: red; */
     
 }
 
@@ -256,27 +283,47 @@ header #top_wrap .menu #user_menu .right_menu a .cart { width: 20px; height: 20p
 
 
 
+header #top_wrap .menu #gnb_wrap .category .lnb_bg { /* 네비 누르면 나오는 카테고리 이미지 (자식) */
+    display: none;
+    /* background-color: aqua;  */
+    background-color: #fff;
+    position: absolute; 
+    width: 100%;
+    left:0; top:74px;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    padding-left: 96px;
+    padding-top: 30.5px;
+    padding-bottom: 30.5px;
+}
+
+
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 
 
-
-/* ===============================================  메인 - 로그인 페이지 */
+/*=========================================   메인 - 로그인 페이지 */
 main {
     font-family: 'SUIT-Regular';
-    padding: 130px 740px;
+    padding: 160px 740px;
     height: 100vh;
     margin: 0 auto;
     text-align: center;
 }
 main #login_wrap { /* 로그인 페이지 큰묶음 */
-    background-color: skyblue;
+    /* background-color: skyblue; */
     width: 440px;
     height: 638px;
     /* padding: 50px 0; */
 }
-main #login_wrap .tab_menu{
-    background-color: pink;
+main #login_wrap .tab_menu{ /* 탭 메뉴*/
+    /* background-color: pink; */
     width: 100%;
 
 }
@@ -288,15 +335,16 @@ main #login_wrap .tab_menu .tab{
 }
 main #login_wrap .tab_menu .tab ul{}
 main #login_wrap .tab_menu .tab ul li{ /* 탭 메뉴 리스트 */
-    background-color: yellow;
+    /* background-color: yellow; */
+    border-bottom: 2px solid rebeccapurple;
     width: 220px; height: 50px;
     line-height: 50px;
-    border-bottom: 2px solid rebeccapurple;
 }
 main #login_wrap .tab_menu .tab ul li .tab_login_btn{ /* 로그인 탭메뉴 */
     width: 220px; height: 50px;
     font-family: 'SUIT-Regular';
 
+   
 }
 main #login_wrap .tab_menu .tab ul li .tab_nonlogin_btn{/* 비회원 탭메뉴 */
     width: 220px; height: 50px;
@@ -304,39 +352,114 @@ main #login_wrap .tab_menu .tab ul li .tab_nonlogin_btn{/* 비회원 탭메뉴 *
 
 }
 main #login_wrap .tab_menu .form_wrap{
-    background-color: gray
+    /* background-color: gray */
 }
 main #login_wrap .tab_menu .form_wrap form {
     
 }
-main #login_wrap .tab_menu .form_wrap form .input_id{/* 아이디 입력 */}
+main #login_wrap .tab_menu .form_wrap form .input_id{/* 아이디 입력 */
+    /* height: 50px; */
+}
 main #login_wrap .tab_menu .form_wrap form .input_id .inputField{ 
+    /* background-color: aqua; */
     font-family: 'SUIT-Regular';
-    width: 440px; height: 50px;
-    background-color: aqua;
+    width: 440px; height: 20px;
+    border-radius: 5px; border:1px solid #000;
     padding: 30px;
 }
 main #login_wrap .tab_menu .form_wrap form .input_pw{/* 비밀번호 입력 */}
 main #login_wrap .tab_menu .form_wrap form .input_pw .inputField{
     font-family: 'SUIT-Regular';
+    border-radius: 5px; border:1px solid #000;
+    margin-top: 15px;
     width: 440px; height: 50px;
     padding: 30px;
 }
 main #login_wrap .tab_menu .form_wrap form .login_black_btn{/* 로그인 버튼 (검정색 기본 btn) */
     background-color: black;
-    width: 440px; height: 50px;
+    border-radius: 5px;
+    width: 440px; height:50px;
     line-height: 50px;
+    margin-top: 50px;
 }
 
 main #login_wrap .tab_menu .form_wrap form .login_black_btn .standard_btn{
     font-family: 'SUIT-Regular';
     color: #fff;
+}
+/* --------------------- 로그인 폼 끝 */
+main #login_wrap .tab_menu .login_btn_wrap{
+    width: 440px;
+}
+main #login_wrap .tab_menu .login_btn_wrap .login_btns{
+    /* background-color: palevioletred;
+   width: 440px; height: 50px;
+    line-height: 50px; */
+}
+main #login_wrap .tab_menu .login_btn_wrap .login_btns #kakao{
+    background-color: #f7e600;
+    width: 440px; height: 50px;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+main #login_wrap .tab_menu .login_btn_wrap .login_btns #kakao .kakaobtn{
+}
+main #login_wrap .tab_menu .login_btn_wrap .login_btns #kakao .kakaobtn p {
+    line-height: 50px;
+}
+main #login_wrap .tab_menu .login_btn_wrap .login_btns #naver{
+    background-color: #03c75a;
+    width: 440px; height: 50px;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+main #login_wrap .tab_menu .login_btn_wrap .login_btns #naver .naverbtn{
+    width: 440px; height: 50px;
+    line-height: 50px;
+}
+main #login_wrap .tab_menu .login_btn_wrap .login_btns #naver .naverbtn p{
+    line-height: 50px;
+    color:#fff;
+    font-weight: 300;
+}
+main #login_wrap .tab_menu .login_btn_wrap .login_txt_wrap {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 auto;
+    justify-content: space-between;
+    /* background-color: skyblue; */
+    align-items: center;
+}
+main #login_wrap .tab_menu .form_wrap .login_btn_wrap .login_txt{
     
-
+}
+main #login_wrap .tab_menu .login_btn_wrap .login_txt_wrap .login_txt .find_id{
+    font-family: 'SUIT-Regular';
+}
+main #login_wrap .tab_menu .login_btn_wrap .login_txt_wrap .login_txt .find_pw{
+    font-family: 'SUIT-Regular';
 }
 
-/* ====================================================================== 메인 - 로그인 끝  */
+main #login_wrap .tab_menu .login_btn_wrap .login_txt_wrap .join_btn{ /* 회원가입 버튼 */
+    /* background-color: yellow; */
+    border: 2px solid #000;
+    border-radius: 5px;
+    width: 74px; height: 34px;
 
+}
+main #login_wrap .tab_menu .login_btn_wrap .login_txt_wrap .join_btn:hover{
+    background-color: #000;
+    border: none;
+    color: #fff;
+}
+main #login_wrap .tab_menu .login_btn_wrap .login_txt_wrap .join_btn .join:hover{
+    color: #fff;
+}
+main #login_wrap .tab_menu .login_btn_wrap .login_txt_wrap .join_btn .join{
+    font-family: 'SUIT-Regular';
+    line-height: 30px;
+}
 /* --------------------------- 푸터 css --------------------------*/
 footer {
     width: 100%;
@@ -347,7 +470,9 @@ footer {
     padding-right: 217px;
     padding-top: 61.5px;
     padding-bottom: 61.5px;
+
 }
+
 footer #footer_wrap{
     /* border: 2px solid rebeccapurple; */
 }
@@ -357,8 +482,8 @@ footer #footer_wrap .footer_top{
     position: relative;
     margin-bottom: 40px;
 }
-
-footer #footer_wrap .footer_top .top_contents_1{ /* 푸터 - 매장안내 */
+/* 푸터 - 매장안내 */
+footer #footer_wrap .footer_top .top_contents_1{
     margin-right: 100px;
 }
 footer #footer_wrap .footer_top .top_contents_1 a{
@@ -369,15 +494,17 @@ footer #footer_wrap .footer_top .top_contents_1 a p{
     font-size: 0.75rem;
     font-weight: 300;
     color: #fff;
+
 }
 footer #footer_wrap .footer_top .top_contents_1 a p em{
     font-weight: 500;
     font-size: 1rem;
     color: #fff;
 }
-
-footer #footer_wrap .footer_top .top_contents_2{ /* 푸터 - 고객서비스 */
+/* 푸터 - 고객서비스 */
+footer #footer_wrap .footer_top .top_contents_2{
     margin-right: 100px;
+
 }
 footer #footer_wrap .footer_top .top_contents_2 a{}
 footer #footer_wrap .footer_top .top_contents_2 a p{
@@ -390,30 +517,36 @@ footer #footer_wrap .footer_top .top_contents_2 a p em{
     font-weight: 500;
     font-size: 1rem;
     color: #fff;
+
 }
 
-footer #footer_wrap .footer_top .top_contents_3{/* 푸터 - 법적고지 */
-}
+/* 푸터 - 법적고지 */
+footer #footer_wrap .footer_top .top_contents_3{}
 footer #footer_wrap .footer_top .top_contents_3 a{}
 footer #footer_wrap .footer_top .top_contents_3 a p{
     margin-bottom: 20px;
     font-size: 0.75rem;
     font-weight: 300;
     color: #fff;
+
 }
 footer #footer_wrap .footer_top .top_contents_3 a p em{
     font-weight: 500;
     font-size: 1rem;
     color: #fff;
+
 }
 
-footer #footer_wrap .footer_bottom { /* 푸터 bottom */
+/* 푸터 bottom */
+footer #footer_wrap .footer_bottom {
     /* background-color: teal; */
     font-size: 0.75rem; 
     font-weight: 200;
     font-family: 'SUIT',sans-serif;
     display: flex;
     justify-content: space-between;
+
+
 }
 footer #footer_wrap .footer_bottom address{
     width:100%;
@@ -433,7 +566,8 @@ footer #footer_wrap .footer_bottom p a em{
     color: #fff;
 }
 
-footer #footer_wrap .footer_bottom .sns_wrap{/* 푸터 sns */
+/* 푸터 sns */
+footer #footer_wrap .footer_bottom .sns_wrap{
     width: 100%;
     text-align: right;
     padding-top: 30px;

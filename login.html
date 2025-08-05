@@ -118,18 +118,27 @@
                                 <button type="submit" class="standard_btn">로그인</button>
                             </div>
                         </form>
-                        <div class="login_btns"><!-- 카카오로그인, 네이버 로그인  -->
-                            <a href="https://accounts.kakao.com/" class="kakaoBtn"><p>카카오 로그인</p></a>
-                            <a href="https://nid.naver.com/" class="naverBtn"><p>네이버 로그인</p></a>
-                        </div>
-                        <div class="login_txt"><!-- 아이디, 비밀번호찾기 -->
-                            <a href="#" class="find_id">아이디 찾기</a>
-                            <a href="#" class="find_pw">비밀번호 찾기</a>
-                        </div>
-                        <div class="join_btn"><!-- 회원가입 버튼 -->
-                            <a href="#" class="join">회원가입</a>
-                        </div>
                     </div><!-- 로그인 폼 묶음 끝 -->
+                        <div class="login_btn_wrap"> <!-- 카카오로그인, 네이버로그인, 아이디 비번 찾기 큰 묶음 시작 -->
+                            <div class="login_btns"><!-- 카카오로그인, 네이버 로그인  묶음 시작-->
+                                <div id="kakao"><!-- 카카오 -->
+                                    <a href="https://accounts.kakao.com/" class="kakaobtn"><p>카카오 로그인</p></a>
+                                </div>
+                                <div id="naver"><!-- 네이버 -->
+                                    <a href="https://nid.naver.com/" class="naverbtn"><p>네이버 로그인</p></a>
+                                </div>
+                            </div><!-- 카카오로그인, 네이버 로그인  묶음 끝-->
+                            <div class="login_txt_wrap"> <!-- 아이디, 비번 찾기, 회원가입 큰묶음 시작 -->
+                                <div class="login_txt"><!-- 아이디, 비밀번호찾기 -->
+                                    <a href="#" class="find_id">아이디 찾기 |</a>
+                                    <a href="#" class="find_pw">비밀번호 찾기</a>
+                                </div>
+                                <div class="join_btn"><!-- 회원가입 버튼 -->
+                                    <a href="#" class="join">회원가입</a>
+                                </div>
+                            </div><!-- 아이디, 비번 찾기, 회원가입 큰묶음 시작 -->
+                        </div> <!-- 카카오로그인, 네이버로그인, 아이디 비번 찾기 큰 묶음 끝 -->
+                    
                 </div>
             </div><!-- 로그인 페이지 큰묶음 끝 -->
         </main>
