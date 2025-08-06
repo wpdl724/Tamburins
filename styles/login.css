@@ -317,7 +317,6 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg { /* 네비 누르면 나오�
 
 /*=========================================   메인 - 로그인 페이지 */
 main {
-
     font-family: 'SUIT-Regular';
     padding: 160px 740px;
     height: 100vh;
@@ -336,16 +335,17 @@ main #login_wrap .tab_menu{ /* 탭 메뉴*/
     width: 100%;
 
 }
-main #login_wrap .tab_menu .tab{    
+main #login_wrap .tab_menu .tab{
+}
+main #login_wrap .tab_menu .tab ul{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     margin-bottom: 50px;
 }
-main #login_wrap .tab_menu .tab ul{}
 main #login_wrap .tab_menu .tab ul li{ /* 탭 메뉴 리스트 */
     /* background-color: yellow; */
-    border-bottom: 2px solid rebeccapurple;
+    /* border-bottom: 2px solid rebeccapurple; */
     width: 220px; height: 50px;
     line-height: 50px;
 }
@@ -358,8 +358,12 @@ main #login_wrap .tab_menu .tab ul li .tab_nonlogin_btn{/* 비회원 탭메뉴 *
     font-family: 'SUIT-Regular';
 
 }
-main #login_wrap .tab_menu .form_wrap{
-    /* background-color: gray */
+main #login_wrap .tab_menu .login{ /* 로그인 폼 페이지 - 입력창 */
+    /* background-color: gray; */
+    /* display: none; */
+}
+main #login_wrap .tab_menu .nonlogin {
+    display: none;
 }
 main #login_wrap .tab_menu .form_wrap form {
     
@@ -396,6 +400,15 @@ main #login_wrap .tab_menu .form_wrap form .login_black_btn .standard_btn{
     padding: 10px 196px;
 }
 /* --------------------- 로그인 폼 끝 */
+
+/* 비회원 주문조회 - 로그인 폼 시작 */
+
+/* 비회원 주문조회 - 로그인 폼 끝 */
+
+
+
+
+
 main #login_wrap .tab_menu .login_btn_wrap{
     width: 440px;
 }
@@ -469,6 +482,26 @@ main #login_wrap .tab_menu .login_btn_wrap .login_txt_wrap .join_btn .join{
     font-family: 'SUIT-Regular';
     line-height: 30px;
 }
+
+/* 로그인 탭 디자인 효과 */
+.tab_login_btn,
+.tab_nonlogin_btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #aaa;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+    .tab_login_btn.active,
+    .tab_nonlogin_btn.active {
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+
 /* --------------------------- 푸터 css --------------------------*/
 footer {
     width: 100%;

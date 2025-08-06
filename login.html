@@ -100,25 +100,29 @@
                     <div class="tab">
                         <ul class="tab_list"><!-- 탭 메뉴 리스트 (로그인, 비회원)-->
                         <li><a href="#" class="tab_login_btn">로그인</a></li>
-                        <!-- <li><a href="#" class="tab_nonlogin_btn">비회원 주문조회</a></li> -->
-                    </ul>
-                        <ul class="tab_list">
-                            <li><a href="#" class="tab_nonlogin_btn">비회원 주문조회</a></li>
+                        <li><a href="#" class="tab_nonlogin_btn">비회원 주문조회</a></li>
                         </ul>
                     </div>
-                    <div class="form_wrap"><!-- 로그인 폼 묶음 시작 -->
+                    <div class="form_wrap login"><!-- 로그인 폼 묶음 시작 -->
                         <form >
                             <div class="input_id"><!-- 아이디 입력 -->
-                                <input id="sigininEmail" type="text" class="inputField" placeholder="아이디(이메일)" name="sigininEmail">
+                                <input id="sigininEmail" type="text" class="inputField" placeholder="아이디(이메일)">
                             </div>
                             <div class="input_pw"><!-- 비밀번호 입력 -->
-                                <input id="sigininPw" type="password" class="inputField" placeholder="비밀번호" name="sigininPassword">
+                                <input id="sigininPw" type="password" class="inputField" placeholder="비밀번호">
                             </div>
                             <div class="login_black_btn"><!-- 로그인 버튼 (검정색-기본btn) -->
                                 <button type="submit" class="standard_btn">로그인</button>
                             </div>
                         </form>
                     </div><!-- 로그인 폼 묶음 끝 -->
+                    <div class="form_wrap nonlogin"><!-- 비회원 로그인 폼 시작 -->
+                        <form>
+                            <input type="text" placeholder="주문번호">
+                            <input type="email" placeholder="이메일">
+                            <button type="submit">비회원 주문조회</button>
+                        </form><!-- 비회원 로그인 폼 끝 -->
+                    </div>                    
                         <div class="login_btn_wrap"> <!-- 카카오로그인, 네이버로그인, 아이디 비번 찾기 큰 묶음 시작 -->
                             <div class="login_btns"><!-- 카카오로그인, 네이버 로그인  묶음 시작-->
                                 <div id="kakao"><!-- 카카오 -->
@@ -138,7 +142,6 @@
                                 </div>
                             </div><!-- 아이디, 비번 찾기, 회원가입 큰묶음 시작 -->
                         </div> <!-- 카카오로그인, 네이버로그인, 아이디 비번 찾기 큰 묶음 끝 -->
-                    
                 </div>
             </div><!-- 로그인 페이지 큰묶음 끝 -->
         </main>
