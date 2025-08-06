@@ -9,6 +9,7 @@ document.querySelectorAll('a').forEach(function(link) {
     });
 });
 // --------------- 헤더 
+// --------------- 헤더 
 /* 마우스 올렸을때 lnb 나타나는 효과 */
 document.addEventListener("DOMContentLoaded", function () {
     const menuItems = document.querySelectorAll(".category > li");
