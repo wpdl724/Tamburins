@@ -10,7 +10,7 @@
 * font-family: "Playfair Display", serif;
 
 ## common.css 
-* header, footer css 디자인
+* header, footer css 공통 디자인
 
 ## index.css 
 * main , section css 디자인 
@@ -22,7 +22,7 @@
 * 글꼴 공통선택자 만들기 
 * html위 에 글꼴 링크 항상 넣기 
 
-* 스와이퍼 설정하는 방법
+* 스와이퍼 작성하는 방법
 <!-- <전체부모>
         <제목부모>
             제목링크
