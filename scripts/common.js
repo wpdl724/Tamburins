@@ -70,7 +70,7 @@ lang: {
     white: './images/icons/login_WW.png',
     black: './images/icons/login_BB.png',
     },
-    cart: {
+    header_cart: {
     white: './images/icons/cart_White_empty.png',
     black: './images/icons/cart_Black_empty.png',
     },
