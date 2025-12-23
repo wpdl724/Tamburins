@@ -116,14 +116,14 @@ main .new_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p span{
 
 }
 /* 2행 슬라이드 버튼  */
-.swiper-button-prev:after {display: none;}
-.swiper-button-next:after {display: none;}
+/* .swiper-button-prev:after {display: none;}
+.swiper-button-next:after {display: none;} */
 main .new_product .new_wrap .swiper-button-prev{}
 
 main .new_product .new_wrap .swiper-button-prev a {
     position: absolute;
     right:-100px;
-    top:-50px;
+    top:10px;
     z-index: 99;
     /* background-color: yellowgreen; */
 }
@@ -131,7 +131,7 @@ main .new_product .new_wrap .swiper-button-next {}
 main .new_product .new_wrap .swiper-button-next a {
     position: absolute;
     left:-150px;
-    top:-50px;
+    top:10px;
     z-index: 99;
 }
 /* 2행 개별 선택 */
@@ -313,8 +313,8 @@ main #product_list .list_wrap .swiper .swiper-wrapper .swiper-slide .txt_box p s
 /* 4 행 body - css */
 
 /* 4행 슬라이드 버튼  */
-.swiper-button-prev:after {display: none;}
-.swiper-button-next:after {display: none;}
+/* .swiper-button-prev:after {display: none;}
+.swiper-button-next:after {display: none;} */
 
 /* 좌우 버튼 화살표 4행 */
 main #product_list .list_wrap .swiper-button-prev{}
@@ -578,3 +578,15 @@ main .instagram .swiper .swiper-wrapper .swiper-slide .swiper-button-next a {
         font-weight: 400;
     }
 /* 8행 : 카피문구 광고 배너 끝*/
+
+/* ---------- 스와이퍼 버튼 오류수정 */
+/* Swiper 기본 컬러 제거 */
+:root {
+  --swiper-theme-color: transparent;
+}
+
+/* 기본 화살표 아이콘 제거 */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none !important;
+}
