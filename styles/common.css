@@ -159,7 +159,7 @@ header #top_wrap .menu #gnb_wrap .category .lnb_bg { /* 네비 누르면 나오�
     background-color: #fff;
     position: absolute; 
     width: 100%;
-    left:0; top:74px;
+    left:0; top:68px;
     transition: all 0.3s ease;
     z-index: 1000;
     padding-left: 96px;
