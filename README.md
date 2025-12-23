@@ -31,7 +31,6 @@
         <내용부모>
             <제목1에 대한 내용부모>
                 <div class="swiper" id="hand_swiper">
-                    
                     <div class="swiper-wrapper"> 필수
                         <div class="swiper-slide slide1">내용</div>
                         <div class="swiper-slide slide2">slide2</div>
