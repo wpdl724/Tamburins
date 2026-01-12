@@ -71,7 +71,7 @@ lang: {
     black: './images/icons/login_BB.png',
     },
     header_cart: {
-    white: './images/icons/cart_White_empty.png',
+    white: './images/icons/cart_white_empty.png',
     black: './images/icons/cart_Black_empty.png',
     },
     search: {
